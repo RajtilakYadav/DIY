@@ -6,11 +6,14 @@ import About from "./Component/About";
 import Login from "./Component/Login";
 import Signup from "./Component/Signup";
 import { SnackbarProvider } from "notistack";
-import Browse from "./Component/Browse";
 import Admin from "./Component/admin";
 import AddProduct from "./Component/admin/AddProduct";
 import Adminsignup from "./Component/Adminsignup";
 import Adminsignin from "./Component/Adminsignin";
+import Product from "./Component/Product";
+import View from "./Component/View";
+import ManageUser from "./Component/admin/ManageUser";
+
 const App = () => {
   return (
     <div>
@@ -23,14 +26,17 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/About" element={<About />} />
             <Route path="/Signup" element={<Signup />} />
+            <Route path="/view/:id" element={<View />} />
 
-            <Route path="/browse" element={<Browse />} />
+            <Route path="/Product" element={<Product />} />
             <Route path="/adminsignup" element={<Adminsignup />} />
             <Route path="/adminsignin" element={<Adminsignin />} />
+            
 
 
             <Route path="/admin" element={<Admin />}>
               <Route path="addproduct" element={<AddProduct />} />
+              <Route path="manageuser" element={<ManageUser />} />
             </Route>
 
           </Routes>
