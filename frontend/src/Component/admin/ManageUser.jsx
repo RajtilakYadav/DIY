@@ -41,11 +41,13 @@ const ManageUser = () => {
                     <tr>
                         <th>Name</th>
                         <th>Email</th>
-                        <th></th>
+                        <th>Password</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {displayUser()}
+                    {
+                    displayUser()
+                    }
                 </tbody>
             </table>
         </div>

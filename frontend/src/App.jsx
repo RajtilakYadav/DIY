@@ -13,6 +13,9 @@ import Adminsignin from "./Component/Adminsignin";
 import Product from "./Component/Product";
 import View from "./Component/View";
 import ManageUser from "./Component/admin/ManageUser";
+import ManageProduct from "./Component/admin/ManageProduct";
+
+
 
 const App = () => {
   return (
@@ -27,6 +30,7 @@ const App = () => {
             <Route path="/About" element={<About />} />
             <Route path="/Signup" element={<Signup />} />
             <Route path="/view/:id" element={<View />} />
+            
 
             <Route path="/Product" element={<Product />} />
             <Route path="/adminsignup" element={<Adminsignup />} />
@@ -37,6 +41,9 @@ const App = () => {
             <Route path="/admin" element={<Admin />}>
               <Route path="addproduct" element={<AddProduct />} />
               <Route path="manageuser" element={<ManageUser />} />
+              <Route path="manageproduct" element={<ManageProduct />} />
+              
+              
             </Route>
 
           </Routes>
