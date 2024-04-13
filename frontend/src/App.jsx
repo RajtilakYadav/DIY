@@ -6,18 +6,16 @@ import About from "./Component/About";
 import Login from "./Component/Login";
 import Signup from "./Component/Signup";
 import { SnackbarProvider } from "notistack";
-import Browse from "./Component/Browse";
 import Admin from "./Component/admin";
 import AddProduct from "./Component/admin/AddProduct";
 import Adminsignup from "./Component/Adminsignup";
 import Adminsignin from "./Component/Adminsignin";
+import Product from "./Component/Product";
 import View from "./Component/View";
-import Notfound from "./Component/Notfound";
-import ContactUs from "./Component/ContactUs";
-import Feedback from "./Component/Feedback";
-import { UserProvider } from "./UserContext";
-
-
+import ManageUser from "./Component/admin/ManageUser";
+import Video from "./Component/Video";
+import ManageProduct from "./Component/admin/ManageProduct";
+// import UpdateProduct from "./Component/UpdateProduct";
 
 
 
@@ -34,22 +32,24 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/About" element={<About />} />
             <Route path="/Signup" element={<Signup />} />
-            <Route path="/View/:id" element={<View />} />
-            <Route path="/Notfound" element={<Notfound />} /> 
-            <Route path="/ContactUs" element={<ContactUs />} /> 
-            <Route path="/Feedback" element={<Feedback />} /> 
-             
-            
-            
+            <Route path="/Video" element={<Video />} />
+            {/* <Route path="/UpdateProduct/:id" element={<UpdateProduct />} /> */}
+            <Route path="/view/:id" element={<View />} />
             
 
-            <Route path="/browse" element={<Browse />} />
+            <Route path="/Product" element={<Product />} />
             <Route path="/adminsignup" element={<Adminsignup />} />
             <Route path="/adminsignin" element={<Adminsignin />} />
+            
 
 
             <Route path="/admin" element={<Admin />}>
               <Route path="addproduct" element={<AddProduct />} />
+              <Route path="ManageUser" element={<ManageUser />} />
+              <Route path="ManageProduct" element={<ManageProduct />} />
+      
+              
+              
             </Route>
 
           </Routes>
