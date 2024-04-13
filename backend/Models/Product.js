@@ -5,7 +5,8 @@ const myschema = new Schema({
     description: String,
     category: String,
     price: Number,
-    image: String
+    image: String,
+    video: String
 });
 
 module.exports = model("product", myschema)

@@ -13,7 +13,8 @@ const AddProduct = () => {
       description: "",
       category: "",
       price: "",
-      image: ""
+      image: "",
+      video: ""
     },
     // Step4 : what happens when form is submitted
     onSubmit: async (values, action) => {
@@ -42,6 +43,22 @@ const AddProduct = () => {
   
  
     const uploadFile = (e) => {
+      const file = e.target.files[0];
+     
+      setSelFile(file);
+      const fd = new FormData();
+      fd.append("myfile",file);
+      fetch("http://localhost:3000/util/uploadfile", {
+        method: "POST",
+        body: fd,
+      }).then((res) => {
+        if (res.status === 200) {
+          console.log("file uploaded");
+        }
+    });
+    };
+
+    const uploadVideo = (e) => {
       const file = e.target.files[0];
      
       setSelFile(file);
@@ -104,9 +121,15 @@ const AddProduct = () => {
                 </div>
                 <div className="mb-2">
                   <label htmlFor="" className="form-label">
-                    Uploade Images
+                    Upload Images
                   </label>
                   <input type="file" className="form-control" onChange={uploadFile} />
+                </div>
+                <div className="mb-2">
+                  <label htmlFor="" className="form-label">
+                    Upload Video
+                  </label>
+                  <input type="file" className="form-control" onChange={uploadVideo} />
                 </div>
                 <div className="text-center mt-3">
                   <button type="submit" className="btn btn-primary">Add Product</button>

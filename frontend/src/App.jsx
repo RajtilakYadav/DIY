@@ -11,6 +11,14 @@ import Admin from "./Component/admin";
 import AddProduct from "./Component/admin/AddProduct";
 import Adminsignup from "./Component/Adminsignup";
 import Adminsignin from "./Component/Adminsignin";
+import View from "./Component/View";
+import Notfound from "./Component/Notfound";
+import ContactUs from "./Component/ContactUs";
+import Feedback from "./Component/Feedback";
+
+
+
+
 const App = () => {
   return (
     <div>
@@ -23,6 +31,12 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/About" element={<About />} />
             <Route path="/Signup" element={<Signup />} />
+            <Route path="/View/:id" element={<View />} />
+            <Route path="/Notfound" element={<Notfound />} /> 
+            <Route path="/ContactUs" element={<ContactUs />} /> 
+            <Route path="/Feedback" element={<Feedback />} /> 
+            
+            
 
             <Route path="/browse" element={<Browse />} />
             <Route path="/adminsignup" element={<Adminsignup />} />

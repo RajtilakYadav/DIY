@@ -2,6 +2,7 @@ import React from 'react'
 import * as Yup from "yup"
 import {useFormik} from "formik"
 import { enqueueSnackbar } from 'notistack'
+import {useNavigate} from 'react-router-dom'
 
 
 const SignupSchema = Yup.object().shape({
@@ -12,6 +13,8 @@ const SignupSchema = Yup.object().shape({
 
 
 const Signup = () =>{
+
+  const navigate = useNavigate()
 
     // Step1 : Formik Initialization
     const signupForm = useFormik({
@@ -36,6 +39,7 @@ const Signup = () =>{
   
         if (res.status === 200){
           enqueueSnackbar('User Added Successfully', {variant: 'success'})
+          navigate("/login")
         } else {
           enqueueSnackbar('User not added', {variant: 'error'})
         }
@@ -142,7 +146,7 @@ const Signup = () =>{
                 </div>
                 <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                    src="https://static.vecteezy.com/system/resources/previews/006/912/004/non_2x/secure-login-and-sign-up-concept-illustration-vector.jpg"
                     className="img-fluid"
                     alt="Sample image"
                   />

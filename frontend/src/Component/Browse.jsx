@@ -1,40 +1,66 @@
-import React from "react";
+import React, { useState, useEffect } from 'react'
+// import { useParams, Link } from "react-router-dom";
 
 const Browse = () => {
-  const uploadFile = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    setSelFile(file.name);
-    const fd = new FormData();
-    fd.append("myfile",file);
-    fetch("http://localhost:3000/util/uploadfile", {
-      method: "POST",
-      body: fd,
-    }).then((res) => {
-      if (res.status === 200) {
-        console.log("file uploaded");
-      }
-  });
-};
-  return (
-    <div>
-        <div className="container d-flex justify-content-start">
-      <div className="card shadow" style={{ width: "18rem" }}>
-        <img src="..." className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
-        </div>
-      </div>
-      </div>
-    </div>
-  );
-};
+    const [product, setProduct] = useState([]);
 
-export default Browse;
+    //   const { category } = useParams();
+
+    const fetchProduct = async () => {
+        const res = await fetch("http://localhost:3000/product/getall");
+
+        console.log(res.status);
+
+        const data = await res.json();
+        console.log(data);
+        if (res.status === 200) {
+            // const data = await res.json();
+            console.log(data);
+            setProduct(data)
+        }
+    };
+
+    useEffect(() => {
+        fetchProduct();
+    }, []);
+
+    const displayProduct = () => {
+        return product.map((obj) => (
+            <div className="conatainer">
+                <div className="col-md-4">
+                    <div className="card p-3 mb-5 bg-dark  p-card">
+                        {/* <img src={"http://localhost:3000/" + obj.image} alt="" /> */}
+                        <h3 style={{ paddingLeft: "20px" }} className="mt-3 text-light">{obj.title}</h3>
+                        <p style={{ paddingLeft: "20px" }} className="text-light">{obj.price}</p>
+                        <p style={{ paddingLeft: "20px" }} className="text-light">{obj.category}</p>
+                        {/* <Link to={'/view/' + service._id} className="btn btn-outline-primary m-2">Know More</Link>  */}
+
+
+                    </div>
+                </div>
+            </div>
+        ));
+    }
+
+    return (
+        <div className=''>
+            <header className='bg-body-tertiory'>
+                <div className='container py-5'>
+
+                    <p className='display-2 text-center mb-5 fw-bold'>All Products</p>
+
+                    <input type="text" placeholder='Search Items' className='form-control w-75 m-auto'  />
+
+                </div>
+            </header >
+            <div className='container mt-5 '>
+
+                <div className='row mt-5 p-5'> {displayProduct()} </div>
+
+
+            </div>
+        </div >
+    )
+}
+
+export default Browse
