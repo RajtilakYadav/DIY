@@ -47,6 +47,17 @@ router.get('/getbyid/:id',(req,res)=>{
         res.status(500).json(err)
     });
 });
+router.get('/update/:id',(req,res)=>{
+    //emptey brackets will give all the data from the database
+    console.log(req.params.id)
+    Model.findByIdAndUpdate(req.params.id)
+    .then((result)=>{
+        res.json(result)
+    }) .catch((err) =>{
+        console.error(err)
+        res.status(500).json(err)
+    });
+});
 
 
 
