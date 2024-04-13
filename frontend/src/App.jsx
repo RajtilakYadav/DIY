@@ -15,6 +15,8 @@ import View from "./Component/View";
 import Notfound from "./Component/Notfound";
 import ContactUs from "./Component/ContactUs";
 import Feedback from "./Component/Feedback";
+import { UserProvider } from "./UserContext";
+
 
 
 
@@ -25,6 +27,7 @@ const App = () => {
       
         <BrowserRouter>
         <SnackbarProvider>
+          <UserProvider>
           <Navbar />
           <Routes>
             <Route path="/Home" element={<Home />} />
@@ -35,6 +38,8 @@ const App = () => {
             <Route path="/Notfound" element={<Notfound />} /> 
             <Route path="/ContactUs" element={<ContactUs />} /> 
             <Route path="/Feedback" element={<Feedback />} /> 
+             
+            
             
             
 
@@ -48,6 +53,7 @@ const App = () => {
             </Route>
 
           </Routes>
+          </UserProvider>
           </SnackbarProvider>
         </BrowserRouter>
      

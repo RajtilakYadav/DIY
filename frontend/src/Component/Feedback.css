@@ -1,185 +1,143 @@
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-
-html {
-  background: url("http://www.itcsales.co.uk/blog/wp-content/uploads/2018/05/Free-Desktop-Wallpaper-HD-1920-x-1080.jpg") no-repeat;
-  background-size: cover;
-  height: 100%;
+body{
+  color:#fff
+}
+.right_conatct_social_icon{
+     background: linear-gradient(to top right, #9694f0 -5%, #8f10b7 100%);
+}
+.contact_us{
+    background-color: #f1f1f1;
+    padding: 120px 0px;
 }
 
-#feedback-page {
-  text-align: center;
+.contact_inner{
+    background-color: #fff;
+    position: relative;
+    box-shadow: 20px 22px 44px #cccc;
+    border-radius: 25px;
+}
+.contact_field{
+    padding: 60px 340px 90px 100px;
+}
+.right_conatct_social_icon{
+    height: 100%;
 }
 
-#form-main {
-  width: 100%;
-  float: left;
-  padding-top: 0px;
-}
-
-#form-div {
-  background-color: rgba(72, 72, 72, 0.4);
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 35px;
-  padding-bottom: 50px;
-  width: 450px;
-  float: left;
-  left: 50%;
-  position: absolute;
-  margin-top: 30px;
-  margin-left: -260px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-}
-
-.feedback-input {
-  color: #3c3c3c;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  border-radius: 0;
-  line-height: 22px;
-  background-color: #fbfbfb;
-  padding: 13px 13px 13px 54px;
-  margin-bottom: 10px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 3px solid rgba(0, 0, 0, 0);
-}
-
-.feedback-input:focus {
-  background: #fff;
-  box-shadow: 0;
-  border: 3px solid #3498db;
-  color: #3498db;
-  outline: none;
-  padding: 13px 13px 13px 54px;
-}
-
-.focused {
-  color: #30aed6;
-  border: #30aed6 solid 3px;
-}
-
-/* Icons ---------------------------------- */
-#name {
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#name:focus {
-  background-size: 30px 30px;
-  background-position: 8px 5px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#email {
-   background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#email:focus {
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-
-#comment {
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
-.heading{
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: white;
-    font-weight: 600;
+.contact_field h3{
+   color: #000;
     font-size: 40px;
-    background-color: transparent;
-    width: auto;
-    margin-right:auto;
-    margin-left:auto;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px
+}
+.contact_field p{
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+.contact_field .form-control{
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.contact_field .form-control:focus{
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid #1325e8;
+}
+.contact_field .form-control::placeholder{
+    font-size: 13px;
+    letter-spacing: 1px;
+    
+    
 }
 
-.head2{
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: red;
+.contact_info_sec {
+    position: absolute;
+    background: linear-gradient(180deg, #9694f0 -5%, #8f10b7 100%);
+    
+    /* background-image: url("https://cdn.dribbble.com/userupload/4160961/file/original-4eb6f97a3682c6a23ce276c952626b0d.png?resize=2048x1536");
+    background-size:cover;
+    background-position: center; */
+    right: 1px;
+    top: 18%;
+    height: 340px;
+    width: 340px;
+    padding: 40px;
+    border-radius: 25px 0 0 25px;
 }
-textarea {
-  width: 100%;
-  height: 150px;
-  line-height: 150%;
-  resize: vertical;
+.contact_info_sec h4{
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+    color: #fff;
 }
-
-input:hover,
-textarea:hover,
-input:focus,
-textarea:focus {
-  background-color: white;
+.contact_info_sec h6{
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+  color: #fff;
 }
-
-#button-blue {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  float: left;
-  width: 100%;
-  border: #fbfbfb solid 4px;
-  cursor: pointer;
-  background-color: #3498db;
-  color: white;
-  font-size: 24px;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  margin-top: -4px;
-  font-weight: 700;
+.fa-headset{
+  color: #fff;
+  margin-bottom: 20px;
 }
-
-#button-blue:hover {
-  background-color: rgba(0, 0, 0, 0);
-  color: #0493bd;
+.fa-envelope-open-text{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.fa-map-marked-alt{
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-.submit:hover {
-  color: #3498db;
+.info_single{
+    margin: 30px 0px;
+    
+}
+.info_single i{
+    margin-right: 15px;
+}
+.info_single span{
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
-.ease {
-  width: 0px;
-  height: 74px;
-  background-color: #fbfbfb;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  transition: 0.3s ease;
+button.contact_form_submit {
+    background: linear-gradient(to top right, #1325e8 -5%, #8f10b7 100%);
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 2px;
 }
-.Subject{
-    margin-top: 6px;
+.socil_item_inner li{
+    list-style: none;
+}
+.socil_item_inner li a{
+    color: #fff;
+    margin: 0px 15px;
+    font-size: 14px;
+}
+.socil_item_inner{
+    padding-bottom: 10px;
 }
 
-.submit:hover .ease {
-  width: 100%;
-  background-color: white;
+.map_sec{
+    padding: 50px 0px;
 }
-
-@media only screen and (max-width: 580px) {
-  #form-div {
-    left: 3%;
-    margin-right: 3%;
-    width: 88%;
-    margin-left: 0;
-    padding-left: 3%;
-    padding-right: 3%;
-  }
+.map_inner h4, .map_inner p{
+    color: #000;
+    text-align: center
+}
+.map_inner p{
+    font-size: 13px;
+}
+.map_bind{
+   margin-top: 50px;
+    border-radius: 30px;
+    overflow: hidden;
 }

@@ -3,6 +3,7 @@ import  './Login.css'
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import {useNavigate} from 'react-router-dom'
+import useUserContext from '../UserContext';
 
 const Login =()=> {
   
@@ -31,6 +32,10 @@ const Login =()=> {
       if (res.status === 200){
         enqueueSnackbar('User Login Successfully', {variant: 'success'})
         navigate("/browse")
+        setLoggedIn(true)
+        const data = await res.json()
+        console.log(data)
+        sessionStorage.setItem('user',JSON.stringify(data))
       } else {
         enqueueSnackbar('User not login', {variant: 'error'})
       }
@@ -39,6 +44,8 @@ const Login =()=> {
     // Step6 : Validation Schema
     // validationSchema: LoginSchema
   })
+
+  const {setLoggedIn} = useUserContext();
 
 
   return (

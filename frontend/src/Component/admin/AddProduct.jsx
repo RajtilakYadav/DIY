@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import { enqueueSnackbar } from "notistack";
 import React, { useState } from "react";
+import './AddProduct.css'
 
 
 const AddProduct = () => {
@@ -75,10 +76,10 @@ const AddProduct = () => {
     };
   
   return (
-    <div>
-      <div className="container">
+    <div className="full-container">
+      <div className="container ">
         <div className="row d-flex justify-content-center">
-          <div className="col-md-6 ">
+          <div className="col-md-6 mt-4">
             <div className="card p-4">
               <h1 className="text-center">Add Product</h1>
               <form action="" onSubmit={productForm.handleSubmit}>
