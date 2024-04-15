@@ -6,7 +6,7 @@ import './AddProduct.css'
 
 const AddProduct = () => {
 
-  const [selFile, setSelFile] = useState([]);
+  const [selFile, setSelFile] = useState('');
 
   const productForm = useFormik({
     initialValues: {
@@ -32,9 +32,9 @@ const AddProduct = () => {
       action.resetForm();
 
       if (res.status === 200) {
-        enqueueSnackbar("User Added Successfully", { variant: "success" });
+        enqueueSnackbar("Product Added Successfully", { variant: "success" });
       } else {
-        enqueueSnackbar("User not added", { variant: "error" });
+        enqueueSnackbar("product not added", { variant: "error" });
       }
     },
 

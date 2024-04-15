@@ -59,6 +59,11 @@ const Navbar = () => {
            AddProduct
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link mx-2" to="/Cart">
+           Cart
+            </Link>
+          </li>
         </ul>
           <div>
             {showLoggedin()}
@@ -106,7 +111,7 @@ const Navbar = () => {
         </div>
         <div className=" collapse navbar-collapse" id="navbarNavDropdown">
           <div className="ms-auto d-none d-lg-block">
-            <div className="input-group">
+            {/* <div className="input-group">
               <span className="border-warning input-group-text bg-warning text-white">
                 <i className="fa-solid fa-magnifying-glass" />
               </span>
@@ -116,7 +121,7 @@ const Navbar = () => {
                 style={{ color: "#7a7a7a" }}
               />
               <button className="btn btn-warning text-white">Search</button>
-            </div>
+            </div> */}
           </div>
           <ul className="navbar-nav ms-auto ">
             <li className="nav-item">

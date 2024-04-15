@@ -70,8 +70,18 @@ router.get('/getbyid/:id',(req,res)=>{
     }) .catch((err) =>{
         console.error(err)
         res.status(500).json(err)
-    })
-})
+    });
+});
+
+router.delete("/delete/:id", (req,res) => {
+    Model.findByIdAndDelete(req.params.id)
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        res.status(500).json(err)
+        console.log(err);
+    });
+});
 
 
 

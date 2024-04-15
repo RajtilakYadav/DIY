@@ -16,6 +16,11 @@ import ManageUser from "./Component/admin/ManageUser";
 import Video from "./Component/Video";
 import ManageProduct from "./Component/admin/ManageProduct";
 // import UpdateProduct from "./Component/UpdateProduct";
+import { UserProvider } from "./UserContext";
+import Cart from "./Component/Cart";
+import ContactUs from "./Component/ContactUs";
+import Feedback from "./Component/Feedback";
+import UpdateProduct from "./Component/UpdateProduct";
 
 
 
@@ -35,6 +40,10 @@ const App = () => {
             <Route path="/Video" element={<Video />} />
             {/* <Route path="/UpdateProduct/:id" element={<UpdateProduct />} /> */}
             <Route path="/view/:id" element={<View />} />
+            <Route path="/Cart" element={<Cart />} />
+            <Route path="/ContactUs" element={<ContactUs />} />
+            <Route path="/Feedback" element={<Feedback />} />
+            <Route path="/UpdateProduct" element={<UpdateProduct />} />
             
 
             <Route path="/Product" element={<Product />} />
