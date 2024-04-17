@@ -7,6 +7,7 @@ import './AddProduct.css'
 const AddProduct = () => {
 
   const [selFile, setSelFile] = useState('');
+  const [video, setVideo] = useState('');
 
   const productForm = useFormik({
     initialValues: {
@@ -20,6 +21,7 @@ const AddProduct = () => {
     // Step4 : what happens when form is submitted
     onSubmit: async (values, action) => {
       values.image = selFile.name
+      values.video = video.name
       console.log(values);
       const res = await fetch("http://localhost:3000/product/add", {
         method: "POST",
@@ -62,7 +64,7 @@ const AddProduct = () => {
     const uploadVideo = (e) => {
       const file = e.target.files[0];
      
-      setSelFile(file);
+      setVideo(file);
       const fd = new FormData();
       fd.append("myfile",file);
       fetch("http://localhost:3000/util/uploadfile", {

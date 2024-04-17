@@ -21,6 +21,7 @@ import Cart from "./Component/Cart";
 import ContactUs from "./Component/ContactUs";
 import Feedback from "./Component/Feedback";
 import UpdateProduct from "./Component/UpdateProduct";
+import { ProductProvider } from "./context/ProductContext";
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
     <div>
       
         <BrowserRouter>
+        <ProductProvider>
         <SnackbarProvider>
           <UserProvider>
           <Navbar />
@@ -43,7 +45,7 @@ const App = () => {
             <Route path="/Cart" element={<Cart />} />
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/Feedback" element={<Feedback />} />
-            <Route path="/UpdateProduct" element={<UpdateProduct />} />
+            <Route path="/UpdateProduct/:id" element={<UpdateProduct />} />
             
 
             <Route path="/Product" element={<Product />} />
@@ -64,6 +66,7 @@ const App = () => {
           </Routes>
           </UserProvider>
           </SnackbarProvider>
+          </ProductProvider>
         </BrowserRouter>
      
     </div>

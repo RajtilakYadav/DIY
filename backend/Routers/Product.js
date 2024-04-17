@@ -49,10 +49,10 @@ router.get('/getbyid/:id',(req,res)=>{
         res.status(500).json(err)
     });
 });
-router.get('/update/:id',(req,res)=>{
+router.put('/update/:id',(req,res)=>{
     //emptey brackets will give all the data from the database
-    console.log(req.params.id)
-    Model.findByIdAndUpdate(req.params.id)
+    // console.log(req.params)
+    Model.findByIdAndUpdate(req.params.id, req.body)
     .then((result)=>{
         res.json(result)
     }) .catch((err) =>{
@@ -82,12 +82,6 @@ router.delete("/delete/:id", (req,res) => {
         console.log(err);
     });
 });
-
-
-
-
-
-
 
 
 module.exports = router;

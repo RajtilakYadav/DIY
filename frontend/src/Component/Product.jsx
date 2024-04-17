@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import useProductContext from "../context/ProductContext";
 
 const Product = () => {
   const [product, setProduct] = useState([]);
   const [masterList, setMasterList] = useState([]);
+  const { addItemToCart, isInCart} = useProductContext();
 
   const fetchProduct = async () => {
     const res = await fetch("http://localhost:3000/product/getall")
@@ -48,7 +50,7 @@ const Product = () => {
               product.map((pro) => {
                 return (
                   <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
-                    <div className="card">
+                    <div className="card ">
                       <img
                         src={"http://localhost:3000/" + pro.image}
                         className="card-img-top"
@@ -68,7 +70,7 @@ const Product = () => {
                         </div>
                         <div className="d-flex justify-content-between mb-3">
                           <h5 className="mb-0"><span>Title</span>{pro.title}</h5>
-                          <h5 className="text-dark mb-0">₹500</h5>
+                         
                         </div>
                         <div className="d-flex justify-content-between mb-2">
                           <p className="text-muted mb-0">
@@ -82,6 +84,9 @@ const Product = () => {
                             <i className="fa fa-star" />
                           </div>
                         </div>
+                      </div>
+                      <div className="card-footer">
+                        <button disabled={isInCart(pro)} onClick={e => addItemToCart(pro)} className="btn btn-outline-primary"><span>{isInCart(pro) ? "Already Added" : "Add to cart"}</span></button>
                       </div>
                     </div>
                   </div>

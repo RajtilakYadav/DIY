@@ -2,9 +2,12 @@ import React from 'react'
 import './Navbar.css'
 import { Link, NavLink } from 'react-router-dom'
 import useUserContext from '../UserContext'
+import useProductContext from '../context/ProductContext'
 
 
 const Navbar = () => {
+
+   const { getCartItemsCount } = useProductContext();
 
   const { loggedIn, logout } = useUserContext()
   console.log(loggedIn)
@@ -61,6 +64,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link className="nav-link mx-2" to="/Cart">
+           
            Cart
             </Link>
           </li>
@@ -156,9 +160,15 @@ const Navbar = () => {
           </ul>
           <ul className="navbar-nav ms-auto ">
             <li className="nav-item">
-              <a className="nav-link mx-2 text-uppercase" href="#">
-                <i className="fa-solid fa-cart-shopping me-1" /> Cart
-              </a>
+              <Link className="nav-link mx-2 text-uppercase" to={"/Cart"}>
+             
+              <div className='d-flex '>
+              <span>{getCartItemsCount()}</span>
+              <i className="fa-solid fa-cart-shopping ms-3 mt-2" />
+              <span>Cart</span>
+              </div>
+                
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link mx-2 text-uppercase" href="#">
