@@ -1,74 +1,77 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Component/Navbar";
-import Home from "./Component/Home";
-import About from "./Component/About";
-import Login from "./Component/Login";
-import Signup from "./Component/Signup";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
+import Home from "./Component/main/Home";
+import About from "./Component/main/About";
+import Login from "./Component/main/Login";
+import Signup from "./Component/main/Signup";
 import { SnackbarProvider } from "notistack";
 import Admin from "./Component/admin";
 import AddProduct from "./Component/admin/AddProduct";
-import Adminsignup from "./Component/Adminsignup";
-import Adminsignin from "./Component/Adminsignin";
-import Product from "./Component/Product";
-import View from "./Component/View";
+import Adminsignup from "./Component/main/Adminsignup";
+import Adminsignin from "./Component/main/Adminsignin";
+import Product from "./Component/user/Product";
+import View from "./Component/user/View";
 import ManageUser from "./Component/admin/ManageUser";
-import Video from "./Component/Video";
+import Video from "./Component/user/Video";
 import ManageProduct from "./Component/admin/ManageProduct";
 // import UpdateProduct from "./Component/UpdateProduct";
 import { UserProvider } from "./UserContext";
-import Cart from "./Component/Cart";
-import ContactUs from "./Component/ContactUs";
-import Feedback from "./Component/Feedback";
-import UpdateProduct from "./Component/UpdateProduct";
+import Cart from "./Component/user/Cart";
+import ContactUs from "./Component/main/ContactUs";
+import Feedback from "./Component/main/Feedback";
+import UpdateProduct from "./Component/admin/UpdateProduct";
 import { ProductProvider } from "./context/ProductContext";
+import AdminAuth from "./auth/AdminAuth";
+import Main from "./Component/main";
+import User from "./Component/user";
+import Notfound from "./Notfound";
 
 
 
 const App = () => {
   return (
     <div>
-      
-        <BrowserRouter>
+
+      <BrowserRouter>
         <ProductProvider>
-        <SnackbarProvider>
-          <UserProvider>
-          <Navbar />
-          <Routes>
-            <Route path="/Home" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Signup" element={<Signup />} />
-            <Route path="/Video" element={<Video />} />
-            {/* <Route path="/UpdateProduct/:id" element={<UpdateProduct />} /> */}
-            <Route path="/view/:id" element={<View />} />
-            <Route path="/Cart" element={<Cart />} />
-            <Route path="/ContactUs" element={<ContactUs />} />
-            <Route path="/Feedback" element={<Feedback />} />
-            <Route path="/UpdateProduct/:id" element={<UpdateProduct />} />
-            
+          <SnackbarProvider>
+            <UserProvider>
 
-            <Route path="/Product" element={<Product />} />
-            <Route path="/adminsignup" element={<Adminsignup />} />
-            <Route path="/adminsignin" element={<Adminsignin />} />
-            
+              <Routes>
+                <Route path="/" element={<Navigate to="/main/home" />} />
+                <Route path="main" element={<Main />}>
+                  <Route path="Home" element={<Home />} />
+                  <Route path="login" element={<Login />} />
+                  <Route path="Signup" element={<Signup />} />
+                  <Route path="adminsignup" element={<Adminsignup />} />
+                  <Route path="adminsignin" element={<Adminsignin />} />
+                  <Route path="About" element={<About />} />
+                  <Route path="ContactUs" element={<ContactUs />} />
+                  <Route path="Feedback" element={<Feedback />} />
+                </Route>
 
 
-            <Route path="/admin" element={<Admin />}>
-              <Route path="addproduct" element={<AddProduct />} />
-              <Route path="ManageUser" element={<ManageUser />} />
-              <Route path="ManageProduct" element={<ManageProduct />} />
-      
-              
-              
-            </Route>
+                <Route path="user" element={<User />}>
+                  <Route path="Product" element={<Product />} />
+                  <Route path="Cart" element={<Cart />} />
+                  <Route path="Video" element={<Video />} />
+                  <Route path="view/:id" element={<View />} />
+                </Route>
 
-          </Routes>
-          </UserProvider>
+                <Route path="/admin" element={<AdminAuth><Admin /></AdminAuth>}>
+                  <Route path="addproduct" element={<AddProduct />} />
+                  <Route path="ManageUser" element={<ManageUser />} />
+                  <Route path="ManageProduct" element={<ManageProduct />} />
+                  <Route path="UpdateProduct/:id" element={<UpdateProduct />} />
+                </Route>
+             <Route path="*" element={<Notfound/>}/>
+              </Routes>
+            </UserProvider>
           </SnackbarProvider>
-          </ProductProvider>
-        </BrowserRouter>
-     
+        </ProductProvider>
+      </BrowserRouter>
+
     </div>
   );
 };
