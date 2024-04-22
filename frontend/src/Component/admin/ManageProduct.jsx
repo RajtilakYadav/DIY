@@ -1,11 +1,9 @@
-<<<<<<< HEAD
+import React, { useEffect, useState } from 'react'
 import React from 'react'
 
-const ManageProduct = () => {
-  return (
-    <div>ManageProduct</div>
-=======
-import React, { useEffect, useState } from 'react'
+// const ManageProduct = () => {
+//   return (
+//     <div>ManageProduct</div>
 
 const ManageProduct = () => {
 
@@ -65,7 +63,6 @@ const ManageProduct = () => {
             </div>
         </div>
     </div>
->>>>>>> 994de897a522623f0922f68e6858e263bccc48e0
   )
 }
 

@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+import React,{useState, useEffect} from 'react'
+
 import React from 'react'
 
-const ManageUser = () => {
-  return (
-    <div>ManageUser</div>
-=======
-import React,{useState, useEffect} from 'react'
+// const ManageUser = () => {
+//   return (
+//     <div>ManageUser</div>
 
 const ManageUser = () => {
     const [Data, setData] = useState([])
@@ -59,7 +58,6 @@ const ManageUser = () => {
             </table>
         </div>
     </div>
->>>>>>> 994de897a522623f0922f68e6858e263bccc48e0
   )
 }
 

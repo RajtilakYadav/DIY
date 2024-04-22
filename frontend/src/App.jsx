@@ -14,7 +14,7 @@ import Product from "./Component/Product";
 import View from "./Component/View";
 import ManageUser from "./Component/admin/ManageUser";
 import Video from "./Component/Video";
-import ManageProduct from "./Component/admin/ManageProduct";
+//import ManageProduct from "./Component/admin/ManageProduct";
 // import UpdateProduct from "./Component/UpdateProduct";
 
 
@@ -46,7 +46,7 @@ const App = () => {
             <Route path="/admin" element={<Admin />}>
               <Route path="addproduct" element={<AddProduct />} />
               <Route path="ManageUser" element={<ManageUser />} />
-              <Route path="ManageProduct" element={<ManageProduct />} />
+              {/*<Route path="ManageProduct/:id" element={<ManageProduct />} />*/}
       
               
               
