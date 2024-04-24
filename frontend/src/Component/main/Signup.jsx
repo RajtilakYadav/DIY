@@ -39,7 +39,7 @@ const Signup = () =>{
   
         if (res.status === 200){
           enqueueSnackbar('User Added Successfully', {variant: 'success'})
-          navigate("/login")
+          navigate("/main/login")
         } else {
           enqueueSnackbar('User not added', {variant: 'error'})
         }

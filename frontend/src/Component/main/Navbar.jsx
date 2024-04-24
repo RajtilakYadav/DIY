@@ -1,186 +1,85 @@
 import React from 'react'
-import './Navbar.css'
-import { Link, NavLink } from 'react-router-dom'
-import useUserContext from '../../UserContext'
+import { Link } from 'react-router-dom'
 import useProductContext from '../../context/ProductContext'
-
+import useUserContext from '../../UserContext';
 
 const Navbar = () => {
+  const { getCartItemsCount } = useProductContext();
+  const { loggedIn, logout } = useUserContext();
+  console.log(loggedIn);
 
-   const { getCartItemsCount } = useProductContext();
-
-  const { loggedIn, logout } = useUserContext()
-  console.log(loggedIn)
-  const showLoggedin = () => {
+  const showLoggedIn = () => {
     if (loggedIn) {
       return (
-        <ul>
-          <li>
+        <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
+          <li className='nav-item'>
             <button className='btn btn-danger' onClick={logout}>Logout</button>
           </li>
         </ul>
-      );
-
+      )
     } else {
-      return <div>
-        <Link to='/Signup' type='button btn btn-outline primary'>Signup</Link>
-        <Link to='/Login' type='button btn btn-outline primary'>Login</Link>
-      </div>
+      return(
+        <form class="d-flex">
+
+        <Link  class="btn btn-outline-success me-3" type="button" to={"/main/signup"}>Signup</Link>
+        <Link class="btn btn-outline-success me-3" type="button" to={"/main/login"}>Login</Link>
+      </form>
+      )
+     
     }
   }
   return (
-    <div><nav className="navbar navbar-expand-md navbar-dark bg-dark">
-    <div className="container">
-      
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav mx-auto">
-          <li className="nav-item">
-            <Link className="nav-link mx-2 active" to="/Home">
-            Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link mx-2" to="/About">
-            About
-            </Link>
-          </li>
-          <li className="nav-item">
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link mx-2" to="/admin/addproduct">
-           AddProduct
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link mx-2" to="/Cart">
-           
-           Cart
-            </Link>
-          </li>
-        </ul>
-          <div>
-            {showLoggedin()}
+    <div>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary shadow">
+        <div className="container-fluid">
+          <div className='d-flex ms-4 mt-3'>
+            <a className="navbar-brand" href="#">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi9cZzhw1U4yXFA82psxthYe8s2PQwz5uW3M2Y7OXItw&s" alt="" style={{ height: 50 }} />
+            </a>
           </div>
-      </div>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mx-auto">
+              <li className="nav-item">
+                <Link className="nav-link active text-dark fw-bold me-1" aria-current="page" to={"/"}>
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-dark fw-bold me-3" to={"/user/Product"}>
+                  Product
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-dark fw-bold me-3" to={"/main/ContactUs"}>
+                  Contact
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-dark fw-bold" to={"/user/Video"}>
+                  Tutorial
+                </Link>
+              </li>
+
+            </ul>
+            {
+              showLoggedIn()
+            }
+          </div>
+        </div>
+      </nav>
+
     </div>
-  </nav>
-  <header>
-    <nav className="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
-      <div className="container">
-        <a className="navbar-brand" href="#">
-          <img
-            src="https://eternitymarketing.com/assets/image-cache/blog/diy.f3f58320.jpg"
-            style={{
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              height: 50,
-              width: 100
-            }}
-          />{" "}
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
-          <div className="input-group">
-            <span className="border-warning input-group-text bg-warning text-white">
-              <i className="fa-solid fa-magnifying-glass" />
-            </span>
-            <input
-              type="text"
-              className="form-control border-warning"
-              style={{ color: "#7a7a7a" }}
-            />
-            <button className="btn btn-warning text-white">Search</button>
-          </div>
-        </div>
-        <div className=" collapse navbar-collapse" id="navbarNavDropdown">
-          <div className="ms-auto d-none d-lg-block">
-            {/* <div className="input-group">
-              <span className="border-warning input-group-text bg-warning text-white">
-                <i className="fa-solid fa-magnifying-glass" />
-              </span>
-              <input
-                type="text"
-                className="form-control border-warning"
-                style={{ color: "#7a7a7a" }}
-              />
-              <button className="btn btn-warning text-white">Search</button>
-            </div> */}
-          </div>
-          <ul className="navbar-nav ms-auto ">
-            <li className="nav-item">
-              <Link
-                className="nav-link mx-2 text-uppercase active"
-                aria-current="page"
-                to="Offers"
-              >
-                Offers
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link mx-2 text-uppercase" to="Product">
-                Products
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link mx-2 text-uppercase" to="Catalog">
-                Catalog
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link mx-2 text-uppercase" to="Services">
-                Services
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link mx-2 text-uppercase" to="About">
-                About
-              </Link>
-            </li>
-          </ul>
-          <ul className="navbar-nav ms-auto ">
-            <li className="nav-item">
-              <Link className="nav-link mx-2 text-uppercase" to={"/Cart"}>
-             
-              <div className='d-flex '>
-              <span>{getCartItemsCount()}</span>
-              <i className="fa-solid fa-cart-shopping ms-3 mt-2" />
-              <span>Cart</span>
-              </div>
-                
-              </Link>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link mx-2 text-uppercase" href="#">
-                <i className="fa-solid fa-circle-user me-1" /> Account
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  </div>
   )
 }
 

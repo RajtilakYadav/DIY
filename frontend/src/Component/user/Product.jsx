@@ -5,6 +5,7 @@ const Product = () => {
   const [product, setProduct] = useState([]);
   const [masterList, setMasterList] = useState([]);
   const { addItemToCart, isInCart} = useProductContext();
+  const[rating,setrating] = useState([]);
 
   const fetchProduct = async () => {
     const res = await fetch("http://localhost:3000/product/getall")
@@ -25,6 +26,20 @@ const Product = () => {
     }));
 
   }
+  
+
+  const fetchRating = async() => {
+    const res = await fetch("http://localhost:3000/feedback/getall")
+    console.log(res.status);
+    const data = await res.json();
+    console.log(data);
+    setrating(data);
+  }
+
+  useEffect(() => {
+   fetchRating()
+  },[])
+
 
 
   return (
@@ -76,13 +91,22 @@ const Product = () => {
                           <p className="text-muted mb-0">
                             Available: <span className="fw-bold">6</span>
                           </p>
-                          <div className="ms-auto text-warning">
+                          {/* <div className="ms-auto text-warning">
                             <i className="fa fa-star" />
                             <i className="fa fa-star" />
                             <i className="fa fa-star" />
                             <i className="fa fa-star" />
                             <i className="fa fa-star" />
-                          </div>
+                          </div> */}
+                          {
+                            rating.map((rat)=> {
+                              return(
+                                <div>
+                                  {rat.rating}
+                                </div>
+                              )
+                            })
+                          }
                         </div>
                       </div>
                       <div className="card-footer">

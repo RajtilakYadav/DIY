@@ -31,7 +31,7 @@ const Login =()=> {
 
       if (res.status === 200){
         enqueueSnackbar('User Login Successfully', {variant: 'success'})
-        navigate("/browse")
+        navigate("/main/home")
         setLoggedIn(true)
         const data = await res.json()
         console.log(data)

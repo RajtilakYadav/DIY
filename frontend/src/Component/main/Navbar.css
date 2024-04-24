@@ -1,10 +1,12 @@
 @media screen and (min-width:777px){
     .nav-link {
       padding:18px 0;
-      min-width:120px;
+      min-width:110px;
     }
     .navbar {
-      padding: 0
+      padding: 0;
+      
+      
     }
   }
   a {

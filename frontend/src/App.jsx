@@ -29,6 +29,7 @@ import Notfound from "./Notfound";
 
 
 
+
 const App = () => {
   return (
     <div>
@@ -59,7 +60,7 @@ const App = () => {
                   <Route path="view/:id" element={<View />} />
                 </Route>
 
-                <Route path="/admin" element={<AdminAuth><Admin /></AdminAuth>}>
+                <Route path="/admin" element={<Admin />}>
                   <Route path="addproduct" element={<AddProduct />} />
                   <Route path="ManageUser" element={<ManageUser />} />
                   <Route path="ManageProduct" element={<ManageProduct />} />

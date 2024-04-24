@@ -1,7 +1,40 @@
 import React from 'react'
 import './ContactUs.css'
+import { useFormik } from 'formik';
+import { enqueueSnackbar } from 'notistack';
 
 const ContactUs = () => {
+
+  const ContactForm = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: ""
+    },
+    // Step4 : what happens when form is submitted
+    onSubmit: async (values, action) => {
+      console.log(values);
+      const res = await fetch("http://localhost:3000/contact/add", {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log(res.status)
+      action.resetForm()
+
+      if (res.status === 200) {
+        enqueueSnackbar('Contact Added Successfully', { variant: 'success' })
+
+      } else {
+        enqueueSnackbar('Contact not added', { variant: 'error' })
+      }
+    }
+
+    // Step6 : Validation Schema
+    // validationSchema: LoginSchema
+  })
   return (
     <div>
         <>
@@ -12,6 +45,7 @@ const ContactUs = () => {
           <div className="contact_inner">
             <div className="row">
               <div className="col-md-10">
+                <form action='' onSubmit={ContactForm.handleSubmit}>
                 <div className="contact_form_inner">
                   <div className="contact_field">
                     <h3>Contact Us</h3>
@@ -21,22 +55,32 @@ const ContactUs = () => {
                     </p>
                     <input
                       type="text"
+                      id='name'
+                      value={ContactForm.values.name}
+                      onChange={ContactForm.handleChange}
                       className="form-control form-group"
                       placeholder="Name"
                     />
                     <input
                       type="text"
+                      id='email'
+                      value={ContactForm.values.email}
+                      onChange={ContactForm.handleChange}
                       className="form-control form-group p-3 "
                       placeholder="Email"
                     />
                     <textarea
                       className="form-control form-group"
+                      id='message'
+                      value={ContactForm.values.message}
+                      onChange={ContactForm.handleChange}
                       placeholder="Message"
                       defaultValue={""}
                     />
-                    <button className="contact_form_submit">Send</button>
+                    <button type='submit' className="contact_form_submit">Send</button>
                   </div>
                 </div>
+                </form>
               </div>
               <div className="col-md-2">
                 <div className="right_conatct_social_icon d-flex align-items-end">
