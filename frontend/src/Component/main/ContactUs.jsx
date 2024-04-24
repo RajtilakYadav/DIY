@@ -36,96 +36,63 @@ const ContactUs = () => {
     // validationSchema: LoginSchema
   })
   return (
+    <>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossOrigin="anonymous"
+    />
     <div>
-        <>
-  <section className="contact_us">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-10 offset-md-1">
-          <div className="contact_inner">
-            <div className="row">
-              <div className="col-md-10">
-                <form action='' onSubmit={ContactForm.handleSubmit}>
-                <div className="contact_form_inner">
-                  <div className="contact_field">
-                    <h3>Contact Us</h3>
-                    <p>
-                      Feel Free to contact us any time. We will get back to you
-                      as soon as we can!.
-                    </p>
-                    <input
-                      type="text"
-                      id='name'
-                      value={ContactForm.values.name}
-                      onChange={ContactForm.handleChange}
-                      className="form-control form-group"
-                      placeholder="Name"
-                    />
-                    <input
-                      type="text"
-                      id='email'
-                      value={ContactForm.values.email}
-                      onChange={ContactForm.handleChange}
-                      className="form-control form-group p-3 "
-                      placeholder="Email"
-                    />
-                    <textarea
-                      className="form-control form-group"
-                      id='message'
-                      value={ContactForm.values.message}
-                      onChange={ContactForm.handleChange}
-                      placeholder="Message"
-                      defaultValue={""}
-                    />
-                    <button type='submit' className="contact_form_submit">Send</button>
-                  </div>
-                </div>
-                </form>
-              </div>
-              <div className="col-md-2">
-                <div className="right_conatct_social_icon d-flex align-items-end">
-                  <div className="socil_item_inner d-flex">
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-facebook-square" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-twitter" />
-                      </a>
-                    </li>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="contact_info_sec">
-              <h4>Contact Info</h4>
-              <div className="d-flex info_single align-items-center">
-                <i className="fas fa-headset" />
-                <h6>+91 8679 054294</h6>
-              </div>
-              <div className="d-flex info_single align-items-center">
-                <i className="fas fa-envelope-open-text" />
-                <h6>info@DiyInnovates.com</h6>
-              </div>
-              <div className="d-flex info_single align-items-center">
-                <i className="fas fa-map-marked-alt" />
-                <h6>
-                  Sector 49 , Indira Nagar, Lucknow, India
-                </h6>
-              </div>
-            </div>
+      <div className="contact-form-wrapper d-flex justify-content-center">
+        <form action="#" className="contact-form"onSubmit={ContactForm.handleSubmit}>
+          <h5 className="title">Contact us</h5>
+          <p className="description">
+            Feel free to contact us if you need any assistance, any help or
+            another question.
+          </p>
+          <div>
+            <input
+              type="text"
+              className="form-control rounded border-white mb-3 form-input"
+              id="name"
+              value={ContactForm.values.name}
+                                onChange={ContactForm.handleChange}
+              placeholder="Name"
+              required=""
+            />
           </div>
-        </div>
+          <div>
+            <input
+              type="email"
+              className="form-control rounded border-white mb-3 form-input"
+              id="email"
+              value={ContactForm.values.email}
+              onChange={ContactForm.handleChange}
+              placeholder="Email"
+              required=""
+            />
+          </div>
+          <div>
+            <textarea
+              id="message"
+              className="form-control rounded border-white mb-3 form-text-area"
+              rows={5}
+              cols={30}
+              value={ContactForm.values.message}
+              onChange={ContactForm.handleChange}
+              placeholder="Message"
+              required=""
+              defaultValue={""}
+            />
+          </div>
+          <div className="submit-button-wrapper">
+            <input type="submit" defaultValue="Send" />
+          </div>
+        </form>
       </div>
     </div>
-  </section>
+  
   <section className="map_sec">
     <div className="container">
       <div className="row">
@@ -157,7 +124,7 @@ const ContactUs = () => {
   </section>
 </>
 
-    </div>
+   
   )
 }
 
