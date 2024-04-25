@@ -149,7 +149,7 @@ const Login =()=> {
     >
       <div className="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
         <h1 className='fw-bold'>
-         DIY Innovates
+         Login
         </h1>
       </div>
       <div className="formbg-outer">

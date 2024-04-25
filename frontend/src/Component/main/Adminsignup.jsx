@@ -44,125 +44,109 @@ const Adminsignup = () => {
     // validationSchema: LoginSchema
   })
   return (
-    <div>
-  {/* Login 13 - Bootstrap Brain Component */}
-  <section className="bg-light py-3 py-md-5">
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
-          <div className="card border border-light-subtle rounded-3 shadow-sm">
-            <div className="card-body p-3 p-md-4 p-xl-5">
-              <div className="text-center mb-3">
-                <a href="#!">
-                  <img
-                    src="https://static8.depositphotos.com/1323882/952/i/450/depositphotos_9524783-stock-illustration-do-it-yourself-concept.jpg"
-                    alt="BootstrapBrain Logo"
-                    width={175}
-                    height={80}
-                  />
-                </a>
-              </div>
-              <h2 className="fs-6 fw-normal text-center text-secondary mb-4">
-                Sign up to your account
-              </h2>
-              <form action="#!" onSubmit={AdminsignupForm.handleSubmit}>
-                <div className="row gy-2 overflow-hidden">
-                  <div className="col-12">
-                    <div className="form-floating mb-3">
-                      <input
-                        type="text"
-                        id="name"
-                        value={AdminsignupForm.values.name}
-                        onChange={AdminsignupForm.handleChange}
-                        className="form-control"
-                      />
-                      <label htmlFor="email" className="form-label">
-                        Username
-                      </label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-floating mb-3">
-                      <input
-                       type="email"
-                       id="email"
-                       value={AdminsignupForm.values.email}
-                       onChange={AdminsignupForm.handleChange}
-                        className="form-control"
-                      />
-                      <label htmlFor="email" className="form-label">
-                        Email
-                      </label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-floating mb-3">
-                      <input
-                        type="password"
-                        id="password"
-                        value={AdminsignupForm.values.password}
-                        onChange={AdminsignupForm.handleChange}
-                        className="form-control"
-                      />
-                      <label htmlFor="password" className="form-label">
-                        Create Password
-                      </label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-floating mb-3">
-                      <input
-                        type="password"
-                        id="cpassword"
-                        value={AdminsignupForm.values.cpassword}
-                        onChange={AdminsignupForm.handleChange}
-                        className="form-control"
-                      />
-                      <label htmlFor="password" className="form-label">
-                        Repeat Password
-                      </label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="d-flex gap-2 justify-content-between">
-                      <div className="form-check">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          defaultValue=""
-                          name="rememberMe"
-                          id="rememberMe"
-                        />
-                        <label
-                          className="form-check-label text-secondary"
-                          htmlFor="rememberMe"
-                        >
-                          Keep me signup in
+    <div><section className="vh-100" style={{ backgroundColor: "#eee" }}>
+    <div className="container h-100">
+      <div className="row d-flex justify-content-center align-items-center h-100">
+        <div className="col-lg-12 col-xl-11">
+          <div className="card text-black" style={{ borderRadius: 25 }}>
+            <div className="card-body p-md-5">
+              <div className="row justify-content-center">
+                <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                  <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                    Sign up
+                  </p>
+                  <form className="mx-1 mx-md-4" onSubmit={AdminsignupForm.handleSubmit}>
+                    <div className="d-flex flex-row align-items-center mb-4">
+                      <i className="fas fa-user fa-lg me-3 fa-fw" />
+                      <div className="form-outline flex-fill mb-0">
+                      <label className="form-label" htmlFor="form3Example1c">
+                          Your Name
                         </label>
+                        <input
+                          type="text"
+                          id="name"
+                          value={AdminsignupForm.values.name}
+                          onChange={AdminsignupForm.handleChange}
+                          className="form-control"
+                        />
+                       
                       </div>
-                      
                     </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="d-grid my-3">
-                      <button className="btn btn-primary btn-lg" type="submit">
-                        Sign up
+                    <div className="d-flex flex-row align-items-center mb-4">
+                      <i className="fas fa-envelope fa-lg me-3 fa-fw" />
+                      <div className="form-outline flex-fill mb-0">
+                      <label className="form-label" htmlFor="form3Example3c">
+                          Your Email
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          value={AdminsignupForm.values.email}
+                          onChange={AdminsignupForm.handleChange}
+                          className="form-control"
+                        />
+                       
+                      </div>
+                    </div>
+                    <div className="d-flex flex-row align-items-center mb-4">
+                      <i className="fas fa-lock fa-lg me-3 fa-fw" />
+                      <div className="form-outline flex-fill mb-0">
+                      <label className="form-label" htmlFor="form3Example4c">
+                          Password
+                        </label>
+                        <input
+                          type="password"
+                          id="password"
+                          value={AdminsignupForm.values.password}
+                          onChange={AdminsignupForm.handleChange}
+                          className="form-control"
+                        />
+                      
+                      </div>
+                    </div>
+                    <div className="d-flex flex-row align-items-center mb-4">
+                      <i className="fas fa-key fa-lg me-3 fa-fw" />
+                      <div className="form-outline flex-fill mb-0">
+                      <label className="form-label" htmlFor="form3Example4cd">
+                          Repeat your password
+                        </label>
+                        <input
+                          type="password"
+                          id="cpassword"
+                          value={AdminsignupForm.values.cpassword}
+                          onChange={AdminsignupForm.handleChange}
+                          className="form-control"
+                        />
+                      
+                      </div>
+                    </div>
+                    <div className="form-check d-flex justify-content-center mb-5">
+                      <input
+                        className="form-check-input me-2"
+                        type="checkbox"
+                        defaultValue=""
+                        id="form2Example3c"
+                      />
+                      <label className="form-check-label" htmlFor="form2Example3">
+                        I agree all statements in{" "}
+                        <a href="#!">Terms of service</a>
+                      </label>
+                    </div>
+                    <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="submit" className="btn btn-primary btn-lg">
+                        Register
                       </button>
                     </div>
-                  </div>
-                  <div className="col-12">
-                    <p className="m-0 text-secondary text-center">
-                      Don't have an account?{" "}
-                      <a
-                        href="#!"
-                        className="link-primary text-decoration-none"
-                      >
-                        Sign in
-                      </a>
-                    </p>
-                  </div>
+                  </form>
                 </div>
-              </form>
+                <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/006/584/649/non_2x/illustration-graphic-cartoon-character-of-home-study-free-vector.jpg"
+                    className="img-fluid"
+                    alt="Sample image"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
