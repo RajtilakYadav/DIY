@@ -70,6 +70,16 @@ const Navbar = () => {
                   Tutorial
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link text-dark fw-bold" to={"/main/About"}>
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-dark fw-bold" to={"/user/Cart"}>
+                  Cart
+                </Link>
+              </li>
 
             </ul>
             {

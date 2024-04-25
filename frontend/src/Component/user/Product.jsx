@@ -70,7 +70,7 @@ const Product = () => {
                         src={"http://localhost:3000/" + pro.image}
                         className="card-img-top"
                         alt="Laptop"
-                        style={{ height: 300 }}
+                        style={{ height: 200 }}
                       />
                       <div className="card-body">
                         <div className="d-flex justify-content-between">
