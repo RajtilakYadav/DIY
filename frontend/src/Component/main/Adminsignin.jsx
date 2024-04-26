@@ -193,7 +193,7 @@ const Adminsignin = () => {
             </span>
             <div className="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span>
-                <a href="#">© Stackfindover</a>
+                <a href="#">© DIY Innovates</a>
               </span>
               <span>
                 <a href="#">Contact</a>

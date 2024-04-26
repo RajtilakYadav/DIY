@@ -66,7 +66,7 @@ const Home = () => {
             </section>
           </SwiperSlide>
           <SwiperSlide>
-            <section className="bsb-hero-2">
+            <section className="bsb-hero-2 bg-primary bg-opacity-25" style={{ height: "60vh" }}>
               <div className="container overflow-hidden w-100 justify-content-center">
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
@@ -80,10 +80,10 @@ const Home = () => {
                     <div className="d-grid gap-2 d-sm-flex">
                       <button
                         type="button"
-                        className="btn btn-primary bsb-btn-xl rounded-pill"
-                        style={{ height: 60, textDecoration: "underline" }}
+                        className="btn btn-primary bsb-btn-xl px-5 fs-5 rounded-pill"
+                        style={{ height: 60,fontFamily:"serif" }}
                       >
-                        Free Consultation
+                       Explore
                       </button>
                     </div>
                   </div>
@@ -99,7 +99,7 @@ const Home = () => {
             </section>
           </SwiperSlide>
           <SwiperSlide>
-            <section className="bsb-hero-2">
+            <section className="bsb-hero-2 bg-primary bg-opacity-25" style={{ height: "60vh" }}>
               <div className="container overflow-hidden w-100 justify-content-center">
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
@@ -113,10 +113,10 @@ const Home = () => {
                     <div className="d-grid gap-2 d-sm-flex">
                       <button
                         type="button"
-                        className="btn btn-primary bsb-btn-xl rounded-pill"
-                        style={{ height: 60, textDecoration: "underline" }}
+                        className="btn btn-primary bsb-btn-xl px-5 fs-5 rounded-pill"
+                        style={{ height: 60, fontFamily:"serif" }}
                       >
-                        Free Consultation
+                        Explore
                       </button>
                     </div>
                   </div>

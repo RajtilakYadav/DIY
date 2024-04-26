@@ -56,22 +56,21 @@ const Product = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-2 my-5">
-            <h1>Filter</h1>
-
-            <h3 className="my-5">Category</h3>
-            <div className="d-flex">
+            <h2>Filter</h2>
+            <h3 className="my-2 ">Category</h3>
+            <div className="d-flex mb-1">
               <input type="checkbox" className="" id="home" value='a'  onChange={(e) => filterByCategory("Home Decore")}/>
               <label for='home' className="ms-3 my-1">Home Decore</label>
             </div>
-            <div className="d-flex">
+            <div className="d-flex mb-1">
               <input type="checkbox" className="" id="hand" value='b' />
               <label for='hand' className="ms-3 my-1">HandiCrafts</label>
             </div>
-            <div className="d-flex">
+            <div className="d-flex mb-1">
               <input type="checkbox" className="" id="kit" value='c' />
               <label for='kit' className="ms-3 my-1">KitchenWare</label>
             </div>
-            <div className="d-flex">
+            <div className="d-flex mb-1">
               <input type="checkbox" className="" id="gar" value='d' />
               <label for='gar' className="ms-3 my-1">Gardening</label>
             </div>
