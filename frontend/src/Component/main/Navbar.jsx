@@ -35,7 +35,7 @@ const Navbar = () => {
   }
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-warning shadow">
+      <nav className="navbar navbar-expand-lg bg-white shadow">
         <div className="container-fluid">
           <div className='d-flex ms-4 mt-3'>
             <a className="navbar-brand" href="#">

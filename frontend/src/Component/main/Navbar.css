@@ -68,7 +68,9 @@
     margin: 0 25px;
 }
 .nav-link:hover{
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #000000;
+    
+   
 }
 .btn-outline-success{
     width: 130px;
@@ -81,16 +83,16 @@
     transition: .3s ease;
 }
 .btn:hover{
-    background: rgba(0, 172, 6, 0.651);
+    background: rgba(0, 102, 255, 0.846);
 }
 #registerBtn{
     margin-left: 15px;
 }
 .btn.white-btn{
-    background:rgba(145, 255, 0, 0.651);
+    background:rgba(0, 102, 255, 0.846);
 }
 .btn.btn.white-btn:hover{
-    background: rgba(0, 255, 8, 0.651);
+    background: rgba(0, 102, 255, 0.846);
 }
 .nav-menu-btn{
     display: none;
