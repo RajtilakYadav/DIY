@@ -108,7 +108,7 @@ const Product = () => {
                             style={{ height: 200 }}
                           />
                           <div className="card-body">
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between ">
                               <p className="small">
                                 <a href="#!" className="text-muted">
                                   Craft

@@ -79,7 +79,7 @@ const Video = () => {
           <button className="btn btn-warning text-white">Search</button>
         </div>
         <div className="row  my-4 g-3">
-          <h1 className=" fw-bold fs-1 text-center" style={{ color: "teal", fontFamily: "initial" }}>Kits</h1>
+          <h1 className=" fw-bold fs-1 text-center" style={{ color: "teal", fontFamily: "initial" }}>Tutorials</h1>
           {
             videoList.map((vid) => {
               return (<div className="col-md-4 text-center">

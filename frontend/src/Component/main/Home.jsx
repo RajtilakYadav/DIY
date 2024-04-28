@@ -136,8 +136,8 @@ const Home = () => {
       </>
 
       {/* Blog 2 - Bootstrap Brain Component */}
-      <section style={{ marginTop: 50, marginBottom: 50 }}>
-        <div className="container justify-content-around py-5">
+      <section style={{ marginTop: 50, marginBottom: 50, backgroundColor: "pink" }}>
+        <div className="container justify-content-around py-5 ">
           <div className="row" style={{ marginLeft: 30 }}>
             <div className="col-md-12 col-lg-4 mb-4 mb-lg-0 justify-content-around">
               <div className="card" style={{ width: 230 }}>
@@ -219,7 +219,7 @@ const Home = () => {
           >
             Product
           </h1>
-          <div className="container py-5">
+          <div className="container py-5 ">
             <div className="row">
               <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
                 <div className="card">
