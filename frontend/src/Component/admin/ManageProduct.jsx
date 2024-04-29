@@ -1,67 +1,91 @@
+
 import React, { useEffect, useState } from 'react'
-import React from 'react'
+
 
 // const ManageProduct = () => {
 //   return (
 //     <div>ManageProduct</div>
+import { enqueueSnackbar } from 'notistack';
+
+import { Link } from 'react-router-dom';
+
+
 
 const ManageProduct = () => {
 
-    const [product , setProduct] = useState([]);
 
-    const fetchProductList = async() => {
-        const res = await fetch("http://localhost:3000/product/getall")
-        console.log(res.status);
-        if (res.status === 200){
+  const [product, setProduct] = useState([]);
 
-            const data = await res.json(data);
-            console.log(data);
-            setProduct(data)
-        }
-       
+  const fetchProductList = async () => {
+    const res = await fetch("http://localhost:3000/product/getall")
+    console.log(res.status);
+    const data = await res.json();
+    console.log(data);
+    setProduct(data);
+
+
+  }
+  useEffect(() => {
+    fetchProductList();
+  }, [])
+
+  const deleteproduct = async (id) => {
+    console.log(id);
+    const res = await fetch("http://localhost:3000/product/delete/" + id, {
+      method: "DELETE",
+    });
+    console.log(res.status);
+    if (res.status === 200) {
+      enqueueSnackbar("product deleted successfully", { variant: "success" })
+      fetchProductList();
+    } else {
+      enqueueSnackbar("something went worng", { variant: "warning" })
     }
-    useEffect(() => {
-    fetchProductList()
-    },[])
+  }
 
   const displayProduct = () => {
-    return product.map((pro) => {
-         <tr>
-            <td>{pro.title}</td>
-            <td>{pro.description}</td>
-            <td>{pro.price}</td>
-            <td>
-                <button className='btn btn-danger'>Delete</button>
-            </td>
-         </tr>
-    })
+    return <table className='shadow table rounded'>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th colSpan={2}>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          product.map((pro) => {
+            return <tr>
+              <td><img src={"http://localhost:3000/" + pro.image} alt="" style={{ height: 40 }} /></td>
+              <td>{pro.title}</td>
+              <td>{pro.description}</td>
+              <td>{pro.category}</td>
+              <td>{pro.price}</td>
+              <td>
+                <Link className='btn btn-warning' to={`/UpdateProduct/${pro._id}`}>Edit</Link>
+              </td>
+              <td>
+                <button className='btn btn-danger' onClick={e => deleteproduct(pro._id)}>Delete</button>
+              </td>
+            </tr>
+          })
+        }
+      </tbody>
+    </table>
+
   }
 
   return (
     <div>
-        <div className="container">
-            <div className="row">
-                <div className="col-md-10">
-                    <div className="card px-3 text-center shadow ">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Description</th>
-                                    <th>Price</th>
-                                </tr>
-                                
-                            </thead>
-                            <tbody>
-                              {
-                                displayProduct()
-                              }
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div className="container">
+        <h1 className='text-center fw-bold text-danger my-04 fs-2'>Manage Product</h1>
+        {
+          displayProduct()
+        }
+      </div>
     </div>
   )
 }
