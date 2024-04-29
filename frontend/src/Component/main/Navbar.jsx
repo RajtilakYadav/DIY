@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav mx-auto">
           <li className="nav-item">
-            <Link className="nav-link mx-2 active" to="/Home">
+            <Link className="nav-link mx-2 active" to="/">
             Home
             </Link>
           </li>
@@ -138,7 +138,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link mx-2 text-uppercase" to="Product">
+              <Link className="nav-link mx-2 text-uppercase" to="/user/product">
                 Products
               </Link>
             </li>
