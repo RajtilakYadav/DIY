@@ -31,7 +31,7 @@ const Login =()=> {
 
       if (res.status === 200){
         enqueueSnackbar('User Login Successfully', {variant: 'success'})
-        navigate("/browse")
+        navigate("/main/home")
         setLoggedIn(true)
         const data = await res.json()
         console.log(data)
@@ -149,7 +149,7 @@ const Login =()=> {
     >
       <div className="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
         <h1 className='fw-bold'>
-         DIY Innovates
+         Login
         </h1>
       </div>
       <div className="formbg-outer">
@@ -198,7 +198,7 @@ const Login =()=> {
           </span>
           <div className="listing padding-top--24 padding-bottom--24 flex-flex center-center">
             <span>
-              <a href="#">© Stackfindover</a>
+              <a href="#">© DIY Innovates</a>
             </span>
             <span>
               <a href="#">Contact</a>

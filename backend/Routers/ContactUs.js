@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Model = require("../Models/User")
+const Model = require("../Models/ContactUs")
 
 
 
@@ -14,7 +14,6 @@ router.post("/add", (req, res) => {
         console.log(err)
         res.status(500).json(err);
     });
-});
 
     router.get('/getall',(req,res)=>{
         //emptey brackets will give all the data from the database
@@ -26,7 +25,7 @@ router.post("/add", (req, res) => {
             res.status(500).json(err)
         })
     })
-
+});
 router.post('/authenticate',(req,res)=>{
     Model.findOne(req.body)
     .then((result) => { 

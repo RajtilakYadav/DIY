@@ -65,7 +65,7 @@ const ManageProduct = () => {
               <td>{pro.category}</td>
               <td>{pro.price}</td>
               <td>
-                <Link className='btn btn-warning' to={`/UpdateProduct/${pro._id}`}>Edit</Link>
+                <Link className='btn btn-warning' to={`/admin/UpdateProduct/${pro._id}`}>Edit</Link>
               </td>
               <td>
                 <button className='btn btn-danger' onClick={e => deleteproduct(pro._id)}>Delete</button>
