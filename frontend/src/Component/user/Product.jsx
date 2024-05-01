@@ -43,7 +43,7 @@ const Product = () => {
 
   const filterByCategory = (category) => {
        
-    const filteredProducts = masterList.filter(producr => product.category === category);
+    const filteredProducts = masterList.filter(product => product.title === category);
     setProduct(filteredProducts);
 
 }
@@ -99,7 +99,7 @@ const Product = () => {
                 {
                   product.map((pro) => {
                     return (
-                      <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
+                      <div className="col-md-12 col-lg-3 mb-4 mb-lg-0 g-3">
                         <div className="card ">
                           <img
                             src={"http://localhost:3000/" + pro.image}
@@ -109,11 +109,11 @@ const Product = () => {
                           />
                           <div className="card-body">
                             <div className="d-flex justify-content-between ">
-                              <p className="small">
+                              {/* <p className="small">
                                 <a href="#!" className="text-muted">
                                   Craft
                                 </a>
-                              </p>
+                              </p> */}
                               <p className="small text-danger">
                                 <s><span>₹</span>{pro.price}</s>
                               </p>
