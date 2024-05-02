@@ -6,10 +6,10 @@
   word-wrap: break-word;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
 }
-body {
+/* body {
     min-height: 100%;
     background-color: #ffffff;
-}
+} */
 h1 {
     letter-spacing: -1px;
 }

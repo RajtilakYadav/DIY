@@ -22,8 +22,8 @@ const Navbar = () => {
       return(
         <form class="d-flex">
 
-        <Link  class="btn btn-outline-success me-3" type="button" to={"/main/Adminsignup"}>Signup</Link>
-        <Link class="btn btn-outline-success me-3" type="button" to={"/main/Adminsignin"}>Login</Link>
+        <Link  class="btn btn-outline-success me-3 text-uppercase" type="button" to={"/main/Adminsignup"}>Signup</Link>
+        <Link class="btn btn-outline-success me-3 text-uppercase" type="button" to={"/main/Adminsignin"}>Login</Link>
         <div className="nav-menu-btn">
       <i className="bx bx-menu" onclick="myMenuFunction()" />
       
@@ -56,22 +56,22 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <Link className="nav-link active text-dark fw-bold me-1" aria-current="page" to={"/"}>
+                <Link className="nav-link active text-dark fw-bold me-1 text-uppercase" aria-current="page" to={"/"}>
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fw-bold me-3" to={"/admin/AddProduct"}>
+                <Link className="nav-link text-dark fw-bold me-3 text-uppercase" to={"/admin/AddProduct"}>
                   Add Product
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fw-bold me-3" to={"/admin/ManageProduct"}>
+                <Link className="nav-link text-dark fw-bold me-3 text-uppercase" to={"/admin/ManageProduct"}>
                   Manage Product
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fw-bold" to={"/admin/ManageUser"}>
+                <Link className="nav-link text-dark fw-bold text-uppercase" to={"/admin/ManageUser"}>
                   Manage User
                 </Link>
               </li>

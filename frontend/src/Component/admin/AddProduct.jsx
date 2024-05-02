@@ -78,11 +78,11 @@ const AddProduct = () => {
     };
   
   return (
-    <div className="full-container">
+    <div className="full-container  ">
       <div className="container ">
         <div className="row d-flex justify-content-center">
           <div className="col-md-6 mt-4">
-            <div className="card p-4">
+            <div className="card p-4 shadow p-3 mb-5 bg-white rounded ">
               <h1 className="text-center">Add Product</h1>
               <form action="" onSubmit={productForm.handleSubmit}>
                 <div className="mb-2">

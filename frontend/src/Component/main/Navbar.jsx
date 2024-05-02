@@ -22,8 +22,8 @@ const Navbar = () => {
       return(
         <form class="d-flex">
 
-        <Link  class="btn btn-outline-success me-3" type="button" to={"/main/signup"}>Signup</Link>
-        <Link class="btn btn-outline-success me-3" type="button" to={"/main/login"}>Login</Link>
+        <Link  class="btn btn-outline-success me-3 text-uppercase" type="button" to={"/main/signup"}>Signup</Link>
+        <Link class="btn btn-outline-success me-3 text-uppercase" type="button" to={"/main/login"}>Login</Link>
         <div className="nav-menu-btn">
       <i className="bx bx-menu" onclick="myMenuFunction()" />
       
@@ -56,32 +56,33 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <Link className="nav-link active text-dark fw-bold me-1" aria-current="page" to={"/"}>
+                <Link className="nav-link active text-dark fw-bold me-1 text-uppercase" aria-current="page" to={"/"}>
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fw-bold me-3" to={"/user/Product"}>
+                <Link className="nav-link text-dark fw-bold me-3 text-uppercase" to={"/user/Product"}>
                   Product
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fw-bold me-3" to={"/main/ContactUs"}>
+                <Link className="nav-link text-dark fw-bold me-3 text-uppercase" to={"/main/ContactUs"}>
                   Contact
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fw-bold" to={"/user/Video"}>
+                <Link className="nav-link text-dark fw-bold text-uppercase" to={"/user/Video"}>
                   Tutorial
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fw-bold" to={"/main/About"}>
+                <Link className="nav-link text-dark fw-bold text-uppercase" to={"/main/About"}>
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fw-bold" to={"/user/Cart"}>
+                <Link className="nav-link text-dark fw-bold d-flex text-uppercase" to={"/user/Cart"}>
+                  <span >{getCartItemsCount()}<i className="bi bi-bag "></i></span>
                   Cart
                 </Link>
               </li>

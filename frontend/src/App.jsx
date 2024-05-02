@@ -29,6 +29,7 @@ import Notfound from "./Notfound";
 import OrderHistory from "./Component/user/Orders";
 import ThankYou from "./Component/user/Thankyou";
 import Checkout from "./Component/Checkout/Checkout";
+import ForgetPassword from "./Component/user/ForgetPassword";
 
 
 
@@ -63,6 +64,7 @@ const App = () => {
                   <Route path="view/:id" element={<View />} />
                   <Route path="order" element={<OrderHistory />} />
                   <Route path="thankyou" element={<ThankYou />} />
+                  <Route path="forgetpassword" element={<ForgetPassword />} />
                 </Route>
 
                 <Route path='checkout' element={<Checkout/>}/>

@@ -1,11 +1,12 @@
 .full-container{
-    background-image: url("https://cdn.dribbble.com/users/1200499/screenshots/15293811/media/e87f4063b8bd5144ab7da423a2ea5edb.jpg?resize=640x480&vertical=center");
+    /* background-image: url("https://cdn.dribbble.com/users/1200499/screenshots/15293811/media/e87f4063b8bd5144ab7da423a2ea5edb.jpg?resize=640x480&vertical=center");
     height: 750px;
     background-size: cover;
-    
-} */
+     */
+     
+} 
 
 .card{
-    background: linear-gradient(90deg, #ffffff, #74000000);
-    border: none;
+    /* background: linear-gradient(90deg, #ffffff, #74000000);
+    border: none; */
 }
