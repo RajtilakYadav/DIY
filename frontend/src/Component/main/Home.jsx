@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,6 +16,22 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+
+  const [product, setProduct] = useState([]);
+
+  const fetchProduct = async () => {
+    const res = await fetch("http://localhost:3000/product/getall")
+    console.log(res.status);
+    const data = await res.json();
+    console.log(data)
+    setProduct(data)
+
+  }
+
+  useEffect(() => {
+    fetchProduct()
+  }, [])
+
   return (
     <>
 
@@ -40,18 +56,18 @@ const Home = () => {
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
                     <h3 className="display-3 fw-bold mb-3" style={{ fontSize: 50 }}>
-                    Products Redefining Creativity
+                      Products Redefining Creativity
                     </h3>
                     <p className="fs-4 mb-5" style={{ fontSize: 25 }}>
-                    Discover the creativity and functionality with our curated selection of DIY Products.
+                      Discover the creativity and functionality with our curated selection of DIY Products.
                     </p>
                     <div className="d-grid gap-2 d-sm-flex ">
                       <Link
                         to={"/user/Product"}
                         type="button"
                         className="btn btn-primary bsb-btn-xl px-5 fs-5 rounded-pill py-3  "
-                        style={{ height: 60,fontFamily:"serif"}}
-                        
+                        style={{ height: 60, fontFamily: "serif" }}
+
                       >
                         Explore
                       </Link>
@@ -74,19 +90,19 @@ const Home = () => {
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
                     <h3 className="display-3 fw-bold mb-3" style={{ fontSize: 50 }}>
-                    Hands On Guidance
+                      Hands On Guidance
                     </h3>
                     <p className="fs-4 mb-5" style={{ fontSize: 25 }}>
-                    Guiding you step-by-step towards DIY mastery through video tutorials.
+                      Guiding you step-by-step towards DIY mastery through video tutorials.
                     </p>
                     <div className="d-grid gap-2 d-sm-flex">
                       <Link
                         to={"/user/Video"}
                         type="button"
                         className="btn btn-primary bsb-btn-xl px-5 fs-5 rounded-pill py-3"
-                        style={{ height: 60,fontFamily:"serif" }}
+                        style={{ height: 60, fontFamily: "serif" }}
                       >
-                       Explore
+                        Explore
                       </Link>
                     </div>
                   </div>
@@ -107,17 +123,17 @@ const Home = () => {
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
                     <h3 className="display-3 fw-bold mb-3" style={{ fontSize: 50 }}>
-                    Sharing Experiences and Feedback
+                      Sharing Experiences and Feedback
                     </h3>
                     <p className="fs-4 mb-5" style={{ fontSize: 25 }}>
-                    Join the conversation and share your experiences to inspire others on their DIY journey.
+                      Join the conversation and share your experiences to inspire others on their DIY journey.
                     </p>
                     <div className="d-grid gap-2 d-sm-flex">
                       <Link
                         to={"/main/Feedback"}
                         type="button"
                         className="btn btn-primary bsb-btn-xl px-5 fs-5 rounded-pill py-3"
-                        style={{ height: 60, fontFamily:"serif" }}
+                        style={{ height: 60, fontFamily: "serif" }}
                       >
                         Explore
                       </Link>
@@ -139,6 +155,15 @@ const Home = () => {
       </>
 
       {/* Blog 2 - Bootstrap Brain Component */}
+
+      <section style={{ marginTop: 50, marginBottom: 50, backgroundColor: "lightgrey" }}>
+        <h1
+          className="mb-3 mt-3"
+          style={{ fontSize: 30, fontWeight: "bold", textAlign: "center" }}
+        >
+          Categories
+        </h1>
+
       <section style={{ marginTop: 50, marginBottom: 50 }}>
       <h1
             className="mb-3 mt-3"
@@ -146,7 +171,8 @@ const Home = () => {
           >
             Categories
           </h1>
-        <div className="container py-5 ">
+
+        <div className="container justify-content-around py-5 ">
           <div className="row" style={{ marginLeft: 30 }}>
             <div className="col-md-12 col-lg-3 mb-4 mb-lg-0 justify-content-center">
               <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }}>
@@ -251,8 +277,13 @@ const Home = () => {
           >
             Product
           </h1>
+
+          <div className="container py-5 " style={{ backgroundColor: "lightgrey" }}>
+            <div className="row" style={{ backgroundColor: "lightgrey" }}>
+
           <div className="container py-5 "style={{}}>
             <div className="row"style={{}}>
+
               <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
                 <div className="card shadow p-3 mb-5 bg-white rounded">
                   <img
@@ -268,7 +299,7 @@ const Home = () => {
                         </a>
                       </p>
                       <p className="small text-danger">
-                      
+
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
@@ -301,11 +332,11 @@ const Home = () => {
                     <div className="d-flex justify-content-between">
                       <p className="small">
                         <a href="#!" className="text-muted">
-                        Handicraft
+                          Handicraft
                         </a>
                       </p>
                       <p className="small text-danger">
-                        
+
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
@@ -338,11 +369,11 @@ const Home = () => {
                     <div className="d-flex justify-content-between">
                       <p className="small">
                         <a href="#!" className="text-muted">
-                        Handicraft
+                          Handicraft
                         </a>
                       </p>
                       <p className="small text-danger">
-                        
+
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
@@ -379,7 +410,7 @@ const Home = () => {
                         </a>
                       </p>
                       <p className="small text-danger">
-                        
+
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
@@ -418,7 +449,7 @@ const Home = () => {
                         </a>
                       </p>
                       <p className="small text-danger">
-                        
+
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
@@ -455,7 +486,7 @@ const Home = () => {
                         </a>
                       </p>
                       <p className="small text-danger">
-                        
+
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
@@ -492,7 +523,7 @@ const Home = () => {
                         </a>
                       </p>
                       <p className="small text-danger">
-                        
+
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
@@ -525,11 +556,11 @@ const Home = () => {
                     <div className="d-flex justify-content-between">
                       <p className="small">
                         <a href="#!" className="text-muted">
-                         Home Decor
+                          Home Decor
                         </a>
                       </p>
                       <p className="small text-danger">
-                        
+
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
@@ -562,7 +593,87 @@ const Home = () => {
         >
           Tutorials
         </h1>
-        <div className="container d-flex justify-content-center">
+
+        {/* <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+             <video src="../vid.mp4" controls style={{height:"30rem", marginLeft:"19rem"}} ></video>
+            </div>
+            <div className="carousel-item">
+             <video src="../vid2.mp4"  controls style={{height:"30rem", marginLeft:"19rem"}}></video>
+            </div>
+            <div className="carousel-item">
+             <video src="../vid3.mp4" controls style={{height:"30rem", marginLeft:"19rem"}}></video>
+            </div>
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div> */}
+
+
+        <div
+          id="carouselExampleAutoplaying"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
+            {
+              product.map((pro) => {
+                return (
+                  <div className="carousel-item active">
+
+
+                    <video src={"http://localhost:3000/" + pro.video} controls style={{ height: "30rem", marginLeft: "19rem" }} ></video>
+
+                  </div>
+                )
+              })
+            }
+            {/* <div className="carousel-item">
+             <video src="../vid2.mp4"  controls style={{height:"30rem", marginLeft:"19rem"}}  ></video>
+            </div>
+            <div className="carousel-item">
+            <video src="../vid3.mp4"  controls style={{height:"30rem", marginLeft:"19rem"}} ></video>
+            </div> */}
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
+        {/* <div className="container d-flex justify-content-center">
           <div className="row">
             <div className="col-md-3 mt-3 justify-content-center">
               <video
@@ -641,7 +752,7 @@ const Home = () => {
               ></video>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
       {/* Hero 2 - Bootstrap Brain Component */}
       <section className="bsb-hero-3 px-3 mt-5 mb-5">
@@ -664,7 +775,7 @@ const Home = () => {
                 About Us
               </h2>
               <p className=" mb-5" style={{ fontSize: 18 }}>
-              At DIY Innovate, we believe that everyone has a creative spark waiting to be ignited. Our mission is to provide you with the tools, materials, and inspiration you need to transform your creative ideas into reality.
+                At DIY Innovate, we believe that everyone has a creative spark waiting to be ignited. Our mission is to provide you with the tools, materials, and inspiration you need to transform your creative ideas into reality.
               </p>
             </div>
           </div>
@@ -672,150 +783,150 @@ const Home = () => {
       </section>
       {/* Footer 2 - Bootstrap Brain Component */}
       <section>
-      <footer className="footer-section">
-  <div className="container">
-    <div className="footer-cta pt-5 pb-5">
-      <div className="row">
-        <div className="col-xl-4 col-md-4 mb-30">
-          <div className="single-cta">
-            <i className="fas fa-map-marker-alt" />
-            <div className="cta-text">
-              <h4>Find us</h4>
-              <span>Hazratganj, Lucknow</span>
+        <footer className="footer-section">
+          <div className="container">
+            <div className="footer-cta pt-5 pb-5">
+              <div className="row">
+                <div className="col-xl-4 col-md-4 mb-30">
+                  <div className="single-cta">
+                    <i className="fas fa-map-marker-alt" />
+                    <div className="cta-text">
+                      <h4>Find us</h4>
+                      <span>Hazratganj, Lucknow</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xl-4 col-md-4 mb-30">
+                  <div className="single-cta">
+                    <i className="fas fa-phone" />
+                    <div className="cta-text">
+                      <h4>Call us</h4>
+                      <span>77899655</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xl-4 col-md-4 mb-30">
+                  <div className="single-cta">
+                    <i className="far fa-envelope-open" />
+                    <div className="cta-text">
+                      <h4>Mail us</h4>
+                      <span>Diyinnovates24@info.com</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="footer-content pt-5 pb-5">
+              <div className="row">
+                <div className="col-xl-4 col-lg-4 mb-50">
+                  <div className="footer-widget">
+                    <div className="footer-logo">
+                      <a href="index.html">
+                        <img
+                          src="https://i.ibb.co/QDy827D/ak-logo.png"
+                          className="img-fluid"
+                          alt="logo"
+                        />
+                      </a>
+                    </div>
+                    <div className="footer-text">
+                      <p>
+                        DIY projects offer an avenue for personal expression, cost savings, and skill development. Whether it's revamping furniture, fixing a leaky faucet, or crafting handmade gifts, DIY fosters empowerment, resourcefulness, and a sense of accomplishment.
+                      </p>
+                    </div>
+                    <div className="footer-social-icon">
+                      <span>Follow us</span>
+                      <a href="#">
+                        <i className="fab fa-facebook-f facebook-bg" />
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-twitter twitter-bg" />
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-google-plus-g google-bg" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div className="footer-widget">
+                    <div className="footer-widget-heading">
+                      <h3>Useful Links</h3>
+                    </div>
+                    <ul>
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">about</a>
+                      </li>
+                      <li>
+                        <a href="#">services</a>
+                      </li>
+                      <li>
+                        <a href="#">portfolio</a>
+                      </li>
+                      <li>
+                        <a href="#">Contact</a>
+                      </li>
+                      <li>
+                        <a href="#">About us</a>
+                      </li>
+                      <li>
+                        <a href="#">Our Services</a>
+                      </li>
+                      <li>
+                        <a href="#">Expert Team</a>
+                      </li>
+                      <li>
+                        <a href="#">Contact us</a>
+                      </li>
+                      <li>
+                        <a href="#">Latest News</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  <div className="footer-widget">
+                    <div className="footer-widget-heading">
+                      <h3>Subscribe</h3>
+                    </div>
+                    <div className="footer-text mb-25">
+                      <p>
+                        Don’t miss to subscribe to our new feeds, kindly fill the form
+                        below.
+                      </p>
+                    </div>
+                    <div className="subscribe-form">
+                      <form action="#">
+                        <input type="text" placeholder="Email Address" />
+                        <button>
+                          <i className="fab fa-telegram-plane" />
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-xl-4 col-md-4 mb-30">
-          <div className="single-cta">
-            <i className="fas fa-phone" />
-            <div className="cta-text">
-              <h4>Call us</h4>
-              <span>77899655</span>
+          <div className="copyright-area">
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-6 col-lg-6 text-center text-lg-left">
+                  <div className="copyright-text">
+                    <p>
+                      Copyright © 2018, All Right Reserved{" "}
+                      <a href="">DIY Innovates</a>
+                    </p>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-xl-4 col-md-4 mb-30">
-          <div className="single-cta">
-            <i className="far fa-envelope-open" />
-            <div className="cta-text">
-              <h4>Mail us</h4>
-              <span>Diyinnovates24@info.com</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="footer-content pt-5 pb-5">
-      <div className="row">
-        <div className="col-xl-4 col-lg-4 mb-50">
-          <div className="footer-widget">
-            <div className="footer-logo">
-              <a href="index.html">
-                <img
-                  src="https://i.ibb.co/QDy827D/ak-logo.png"
-                  className="img-fluid"
-                  alt="logo"
-                />
-              </a>
-            </div>
-            <div className="footer-text">
-              <p>
-              DIY projects offer an avenue for personal expression, cost savings, and skill development. Whether it's revamping furniture, fixing a leaky faucet, or crafting handmade gifts, DIY fosters empowerment, resourcefulness, and a sense of accomplishment.
-              </p>
-            </div>
-            <div className="footer-social-icon">
-              <span>Follow us</span>
-              <a href="#">
-                <i className="fab fa-facebook-f facebook-bg" />
-              </a>
-              <a href="#">
-                <i className="fab fa-twitter twitter-bg" />
-              </a>
-              <a href="#">
-                <i className="fab fa-google-plus-g google-bg" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
-          <div className="footer-widget">
-            <div className="footer-widget-heading">
-              <h3>Useful Links</h3>
-            </div>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">about</a>
-              </li>
-              <li>
-                <a href="#">services</a>
-              </li>
-              <li>
-                <a href="#">portfolio</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">About us</a>
-              </li>
-              <li>
-                <a href="#">Our Services</a>
-              </li>
-              <li>
-                <a href="#">Expert Team</a>
-              </li>
-              <li>
-                <a href="#">Contact us</a>
-              </li>
-              <li>
-                <a href="#">Latest News</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
-          <div className="footer-widget">
-            <div className="footer-widget-heading">
-              <h3>Subscribe</h3>
-            </div>
-            <div className="footer-text mb-25">
-              <p>
-                Don’t miss to subscribe to our new feeds, kindly fill the form
-                below.
-              </p>
-            </div>
-            <div className="subscribe-form">
-              <form action="#">
-                <input type="text" placeholder="Email Address" />
-                <button>
-                  <i className="fab fa-telegram-plane" />
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="copyright-area">
-    <div className="container">
-      <div className="row">
-        <div className="col-xl-6 col-lg-6 text-center text-lg-left">
-          <div className="copyright-text">
-            <p>
-              Copyright © 2018, All Right Reserved{" "}
-              <a href="">DIY Innovates</a>
-            </p>
-          </div>
-        </div>
-       
-      </div>
-    </div>
-  </div>
-</footer>
+        </footer>
 
       </section>
     </>
