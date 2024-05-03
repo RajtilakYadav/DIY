@@ -164,7 +164,7 @@ const Home = () => {
           </h1>
         <div className="container justify-content-around py-5 ">
           <div className="row" style={{ marginLeft: 30 }}>
-            <div className="col-md-12 col-lg-4 mb-4 mb-lg-0 justify-content-around">
+            <div className="col-md-12 col-lg-3 mb-4 mb-lg-0 justify-content-around">
               <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }}>
                 <img
                   src="https://5.imimg.com/data5/SELLER/Default/2023/1/HG/HN/SQ/43676305/handmade-decorative-door-wall-hanging-500x500.jpeg"
@@ -180,17 +180,17 @@ const Home = () => {
                         className="text-muted"
                         style={{ fontWeight: "bold" }}
                       >
-                        Home Decoration
+                        Home Decor
                       </a>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4 mb-4 mb-md-0 justify-content-around">
-              <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }}>
+            <div className="col-md-6 col-lg-3 mb-4 mb-md-0 justify-content-around">
+              <div className="card shadow p-3 mb-53 bg-white rounded" style={{ width: 230 }}>
                 <img
-                  src=" https://diybaazar.com/publicuploads/seller/products/traditional-hand-painted-aluminium-colourfull-decorative-tea-kettle-with-6-glasses-and-1-holder-capacity-1-litre-619-771-1_diybaazar5f9a827dbbef1.jpg"
+                  src="https://assets.wfcdn.com/im/48864981/resize-h380-w380%5Ecompr-r70/2138/213853538/default_name.jpg"
                   className="card-img-top"
                   alt="Laptop"
                   style={{ height: 200 }}
@@ -203,14 +203,37 @@ const Home = () => {
                         style={{ fontWeight: "bold" }}
                         className="text-muted"
                       >
-                        Kitchen Decoration
+                        Kitchenware
                       </a>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4 mb-4 mb-md-0 justify-content-around">
+            <div className="col-md-6 col-lg-3 mb-4 mb-md-0 justify-content-around">
+              <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }}>
+                <img
+                  src=" https://s.alicdn.com/@sc04/kf/UTB8KAMBJ5DEXKJk43Oqq6Az3XXar.jpg_300x300.jpg"
+                  className="card-img-top"
+                  alt="Laptop"
+                  style={{ height: 200 }}
+                />
+                <div className="card-body">
+                  <div className="d-flex justify-content-between">
+                    <p className="small">
+                      <a
+                        href="#!"
+                        style={{ fontWeight: "bold" }}
+                        className="text-muted"
+                      >
+                        Handicraft
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-3 mb-4 mb-md-0 justify-content-around">
               <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }}>
                 <img
                   src="https://imgmedia.lbb.in/media/2022/01/61ea5d152f2ec63701609503_1642749205840.jpg"
@@ -226,7 +249,7 @@ const Home = () => {
                         style={{ fontWeight: "bold" }}
                         className="text-muted"
                       >
-                        Garden Decoration
+                        Gardening
                       </a>
                     </p>
                   </div>
@@ -785,7 +808,7 @@ const Home = () => {
                     <div className="footer-logo">
                       <a href="index.html">
                         <img
-                          src="https://i.ibb.co/QDy827D/ak-logo.png"
+                          src="../Diy logo.png"
                           className="img-fluid"
                           alt="logo"
                         />

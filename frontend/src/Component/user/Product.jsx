@@ -60,7 +60,7 @@ const Product = () => {
             <h4 className="fw-bold my-4">Filter Category</h4>
             {/* <h3 className="my-2 ">Category</h3> */}
             <div className="d-flex mb-1">
-              <input type="checkbox" className="" id="home" value='a' onChange={(e) => filterByCategory("Home Decore")} />
+              <input type="checkbox" className="" id="home" value='a' onChange={(e) => filterByCategory("Home Decor")} />
               <label for='home' className="ms-3 my-1 fw-bold">Home Decor</label>
             </div>
             <div className="d-flex mb-1">
@@ -112,13 +112,13 @@ const Product = () => {
                             <div className="d-flex justify-content-between">
                               <p className="small">
                                 <a  className="text-dark fw-bold fs-5">
-                                  {pro.title}
+                                  {pro.category}
                                 </a>
                               </p>
                              
                             </div>
                             <div className="d-flex justify-content-between mb-2">
-                              <h5 className="">{pro.category}</h5>
+                              <h5 className="">{pro.title}</h5>
 
                             </div>
                             <div>

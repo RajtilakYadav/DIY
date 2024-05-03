@@ -20,15 +20,15 @@ const View = () => {
 
   return (
     <div>
-       <div className="container">
-      <Link to={"/user/product"} className='btn btn-outline-primary rounded-pill px-3 my-4'><i className=" px-2 bi bi-arrow-left-circle"></i>Products</Link>
+       <div className="container ">
+      <Link to={"/user/product"} className='btn btn-outline-primary rounded-pill px-3 my-4  '><i className=" px-2 bi bi-arrow-left-circle "></i>Products</Link>
 
         {
           product !== null ? (
-            <div className="card my-4 shadow">
+            <div className="card my-4 shadow shadow p-3 mb-5 bg-white rounded">
               <div className="row my-5">
                 <div className="col-md-4">
-                  <img src={"http://localhost:3000/" + product.image} alt="" className="img-fluid ms-3" style={{height:"200px"}} />
+                  <img src={"http://localhost:3000/" + product.image} alt="" className="img-fluid ms-5 mt-4 shadow p-2 mb-5 bg-white rounded" style={{height:"200px"}} />
                 </div>
                 <div className="col-md-6">
                   <h1 className='fw-bold py-2' style={{ fontFamily:"initial"}}>Title: {product.title}</h1>

@@ -95,12 +95,12 @@ const Video = () => {
                     <div className='d-flex justify-content-between'>
                       <div className='d-flex py-2'>
 
-                        <button className='btn btn-outline-dark  rounded-pill' style={{ fontFamily: "initial" }}>Subscribe</button>
+                        <button className='btn btn-outline-dark  rounded-pill shadow p-3 mb-5 bg-blue rounded' style={{ fontFamily: "initial" }}>Subscribe</button>
                       </div>
                       <div>
-                        <button onClick={likes} className='btn btn-light rounded-pill' style={{ color: "teal", fontFamily: "initial" }}><i className="bi bi-hand-thumbs-up"></i>Likes <span>{count}</span> </button>
-                        <button onClick={dislikes} className='btn btn-light rounded-pill' style={{ color: "teal", fontFamily: "initial" }}><i className="bi bi-hand-thumbs-down"></i>Dislike </button>
-                        <button onClick={() => shareVideo(vid)} className='btn btn-light rounded-pill' style={{ color: "teal", fontFamily: "initial" }}><i className="bi bi-share"></i>Share</button>
+                        <button onClick={likes} className='btn btn-outline-dark rounded-pill ' style={{ color: "blue", fontFamily: "initial" }}><i className="bi bi-hand-thumbs-up "></i>Likes <span>{count}</span> </button>
+                        <button onClick={dislikes} className='btn btn-outline-dark rounded-pill' style={{ color: "teal", fontFamily: "initial" }}><i className="bi bi-hand-thumbs-down"></i>Dislike </button>
+                        <button onClick={() => shareVideo(vid)} className='btn btn-outline-dark rounded-pill' style={{ color: "teal", fontFamily: "initial" }}><i className="bi bi-share"></i>Share</button>
 
                       </div>
                     </div>
