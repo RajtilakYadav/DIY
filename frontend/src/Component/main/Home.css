@@ -1,5 +1,5 @@
 body {
-  background-color:lightgrey;
+  background-color: rgb(159, 196, 238);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -135,7 +135,7 @@ a {
 .bsb-hero-2 {
   /* background-image: url("https://images.pexels.com/photos/159825/color-pencil-drawing-coloring-colored-pencils-159825.jpeg?auto=compress&cs=tinysrgb&w=800");
   background-size: cover; */
-  background-color:  rgba(173, 193, 214);
+  background-color:  rgb(199, 226, 255);
   
 }
 
@@ -144,7 +144,7 @@ ul {
   padding: 0px;
 }
 .footer-section {
-background: #000000;
+background: rgb(199, 226, 255);
 position: relative;
 }
 .footer-cta {
@@ -161,7 +161,7 @@ padding-left: 15px;
 display: inline-block;
 }
 .cta-text h4 {
-color: #fff;
+color: #000000;
 font-size: 20px;
 font-weight: 600;
 margin-bottom: 2px;
@@ -195,7 +195,7 @@ font-size: 14px;
 line-height: 28px;
 }
 .footer-social-icon span {
-color: #fff;
+color: #000000;
 display: block;
 font-size: 20px;
 font-weight: 700;
@@ -224,7 +224,7 @@ background: #55ACEE;
 background: #DD4B39;
 }
 .footer-widget-heading h3 {
-color: #fff;
+color: #000000;
 font-size: 20px;
 font-weight: 600;
 margin-bottom: 40px;
