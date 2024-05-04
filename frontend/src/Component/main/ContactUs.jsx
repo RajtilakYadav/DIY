@@ -100,14 +100,11 @@ const ContactUs = () => {
               <div className="map_inner">
                 <h4>Find Us on Google Map</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-                  quo beatae quasi assumenda, expedita aliquam minima tenetur
-                  maiores neque incidunt repellat aut voluptas hic dolorem sequi ab
-                  porro, quia error.
+                  
                 </p>
                 <div className="map_bind">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d430331.75605813664!2d80.84256016934229!3d26.81287370447149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1712514048283!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14238.481978593236!2d80.93764980334693!3d26.85202042107195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd09c18f1e13%3A0xbf01e68d3158fb37!2sHazratganj%2C%20Lucknow%2C%20Uttar%20Pradesh%20226001!5e0!3m2!1sen!2sin!4v1714593144260!5m2!1sen!2sin"
                     width="100%"
                     height={450}
                     frameBorder={0}

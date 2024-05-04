@@ -2,8 +2,9 @@ import React from 'react'
 import './Notfound.css'
 
 const Notfound = () => {
+  
   return (
-    <section className="page_404">
+    <section className="page_404 ms-">
   <div className="container">
     <div className="row">
       <div className="col-sm-12 ">

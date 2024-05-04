@@ -5,7 +5,7 @@
    */
    .contact-form-wrapper {
     padding: 100px 0;
-    background-color: #f5e0e5 !important;
+    background-color:  rgb(199, 226, 255) !important;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   
@@ -85,6 +85,6 @@
     background-color: #d30069;
   }
   .map_sec{
-    background-color: #f5e0e5 !important;
+    background-color: rgb(199, 226, 255) !important;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }

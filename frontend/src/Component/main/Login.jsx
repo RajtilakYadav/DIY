@@ -2,7 +2,7 @@ import React from 'react'
 import  './Login.css'
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import useUserContext from '../../UserContext';
 
 const Login =()=> {
@@ -169,7 +169,7 @@ const Login =()=> {
                 <div className="grid--50-50">
                   <label htmlFor="password">Password</label>
                   <div className="reset-pass">
-                    <a href="#">Forgot your password?</a>
+                    <Link  to={"/user/forgetpassword"}>Forgot your password?</Link>
                   </div>
                 </div>
                 <input type="password" name="password" id='password' value={loginForm.values.password} onChange={loginForm.handleChange}/>

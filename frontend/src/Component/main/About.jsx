@@ -1,5 +1,6 @@
 import React from 'react'
 import './About.css'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -46,9 +47,9 @@ const About = () => {
           <p className="font-italic text-muted mb-4">
           From card-making kits to showpiece materials, our carefully curated selection is designed to cater to a wide range of interests and skill levels. We’re constantly updating our inventory with the latest trends and classic favorites to ensure you have everything you need for your next project.
           </p>
-          <a href="#" className="btn btn-light px-5 rounded-pill shadow-sm">
+          <Link to='/user/Product' className="btn btn-light px-5 rounded-pill shadow-sm">
             Learn More
-          </a>
+          </Link>
         </div>
         <div className="col-lg-5 px-5 mx-auto order-1 order-lg-2">
           <img
@@ -72,9 +73,9 @@ const About = () => {
           <p className="font-italic text-muted mb-4">
           We don’t just supply the materials – we guide you through the process. Our extensive library of video tutorials provides clear, step-by-step instructions that make it easy for you to follow along and learn new techniques at your own pace.
           </p>
-          <a href="#" className="btn btn-light px-5 rounded-pill shadow-sm">
+          <Link to='/user/Video' className="btn btn-light px-5 rounded-pill shadow-sm">
             Learn More
-          </a>
+          </Link>
         </div>
       </div>
     </div>

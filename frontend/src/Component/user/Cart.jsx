@@ -26,7 +26,7 @@ const Cart = () => {
         
         <h3>Your Cart is Currently Empty!</h3>
         <p className="text-muted">Before proceed to checkout you must add some products to your shopping cart. <br />You will fill a lot of interesting products on our "Product" page.</p>
-        <Link className="btn rounded-pill my-3" style={{ backgroundColor: "#4BCCF2", color: "#fff" }} to={"/product"}>Return To Shop</Link>
+        <Link className="btn rounded-pill my-3" style={{ backgroundColor: "#4BCCF2", color: "#fff" }} to={"/user/product"}>Return To Shop</Link>
       </div>
     );
     return cartItems.map((item) => (
@@ -46,7 +46,7 @@ const Cart = () => {
           {/* <p className="text-muted h6">{item.brand}</p> */}
           <h3 className=''><span className='fw-bold me-2' style={{ color: "teal", fontFamily: 'initial' }}>Title:</span> {item.title}</h3>
           <h3 className=''> <span className='fw-bold me-2' style={{ color: "teal", fontFamily: 'initial' }}>Price:</span> {item.price}</h3>
-          <p className=""><span className='fw-bold me-2' style={{ color: "teal", fontFamily: 'initial' }}>Description:</span> {item.description}</p>
+          {/* <p className=""><span className='fw-bold me-2' style={{ color: "teal", fontFamily: 'initial' }}>Description:</span> {item.description}</p> */}
         </div>
         <div className="col-3 py-3">
           <div className="input-group">
@@ -80,7 +80,7 @@ const Cart = () => {
                     <p ><span style={{ color: "teal", fontFamily: 'initial', marginInline: "5px" }} >Total:</span>{getCartTotal()}</p>
                     <p><span style={{ color: "teal", fontFamily: 'initial', marginInline: "5px" }}>Items:</span>{getCartItemsCount()}</p>
                     <button className='btn btn-outline-danger my-2' onClick={() => clearCart()}><i className="bi bi-archive px-1"></i>Clear Cart</button>
-                    <button  className="btn btn-outline-warning ms-2 "><i className="bi bi-bag px-1" ></i>Buy Now</button>
+                    <Link to="/checkout" className="btn btn-outline-warning ms-2 "><i className="bi bi-bag px-1" ></i>Buy Now</Link>
                   </div>
                 </div>
               </div>

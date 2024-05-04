@@ -77,7 +77,7 @@ const UpdateProduct = () => {
 
   return (
     <div> <div className="col-md-3 mx-auto pt-5">
-      <div className="card">
+      <div className="card shadow p-3 mb-5 bg-white rounded">
         <div className="card-body">
           <h3 className="text-center my-5">Update Product</h3>
           {productData !== null ? (
