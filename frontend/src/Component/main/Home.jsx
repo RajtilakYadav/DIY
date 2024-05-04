@@ -2,7 +2,7 @@ import React from 'react'
 import { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import video from '../../../public/vid.mp4'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -33,8 +33,8 @@ const Home = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <section className="bsb-hero-2 bg-primary bg-opacity-25 " style={{ height: "60vh" }}>
-              <div className="container overflow-hidden w-100 justify-content-center">
+            <section className="bsb-hero-2 bg-primary bg-opacity-25 ">
+              <div className="container overflow-hidden w-100 justify-content-center md-4">
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
                     <h3 className="display-3 fw-bold mb-3" style={{ fontSize: 50 }}>
@@ -66,7 +66,7 @@ const Home = () => {
             </section>
           </SwiperSlide>
           <SwiperSlide>
-            <section className="bsb-hero-2 bg-primary bg-opacity-25" style={{ height: "60vh" }}>
+            <section className="bsb-hero-2 bg-primary bg-opacity-25">
               <div className="container overflow-hidden w-100 justify-content-center">
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
@@ -99,7 +99,7 @@ const Home = () => {
             </section>
           </SwiperSlide>
           <SwiperSlide>
-            <section className="bsb-hero-2 bg-primary bg-opacity-25" style={{ height: "60vh" }}>
+            <section className="bsb-hero-2 bg-primary bg-opacity-25">
               <div className="container overflow-hidden w-100 justify-content-center">
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
@@ -534,7 +534,7 @@ const Home = () => {
           <div className="row">
             <div className="col-md-3 mt-3 justify-content-center">
               <video
-                src="./vid.mp4"
+                src={video}
                 type="video/mp4"
                 loop=""
                 className="hover-to-play w-100"
@@ -543,8 +543,8 @@ const Home = () => {
             </div>
             <div className="col-md-3 mt-3 justify-content-center">
               <video
-                src="./vid2.mp4"
-                type="video/mp4"
+                src={video}
+                type="vid2/mp4"
                 loop=""
                 className="hover-to-play w-100"
                 style={{ borderRadius: 10 }}
@@ -622,7 +622,7 @@ const Home = () => {
               <img
                 className="img-fluid"
                 loading="lazy"
-                src="./design-1714067349530.jpg"
+                src="https://png.pngtree.com/element_our/sm/20180613/sm_5b21127f6cfb4.jpg"
                 alt="Art of Design"
                 style={{ height: 250 }}
               />
