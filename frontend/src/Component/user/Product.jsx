@@ -44,7 +44,7 @@ const Product = () => {
 
   const filterByCategory = (category) => {
 
-    const filteredProducts = masterList.filter(product => product.title === category);
+    const filteredProducts = masterList.filter(product => product.category === category);
     setProduct(filteredProducts);
 
   }

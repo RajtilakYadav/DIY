@@ -13,9 +13,10 @@ import './Home.css'
 
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
 
   const [product, setProduct] = useState([]);
 
@@ -31,6 +32,11 @@ const Home = () => {
   useEffect(() => {
     fetchProduct()
   }, [])
+
+  const productpage = () => {
+    navigate("/user/Product")
+
+  }
 
   return (
     <>
@@ -165,7 +171,7 @@ const Home = () => {
         <div className="container justify-content-around py-5 ">
           <div className="row" style={{ marginLeft: 30 }}>
             <div className="col-md-12 col-lg-3 mb-4 mb-lg-0 justify-content-around">
-              <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }}>
+              <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
                 <img
                   src="https://5.imimg.com/data5/SELLER/Default/2023/1/HG/HN/SQ/43676305/handmade-decorative-door-wall-hanging-500x500.jpeg"
                   className="card-img-top"
@@ -188,7 +194,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-6 col-lg-3 mb-4 mb-md-0 justify-content-around">
-              <div className="card shadow p-3 mb-53 bg-white rounded" style={{ width: 230 }}>
+              <div className="card shadow p-3 mb-53 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
                 <img
                   src="https://assets.wfcdn.com/im/48864981/resize-h380-w380%5Ecompr-r70/2138/213853538/default_name.jpg"
                   className="card-img-top"
@@ -211,7 +217,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-6 col-lg-3 mb-4 mb-md-0 justify-content-around">
-              <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }}>
+              <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
                 <img
                   src=" https://s.alicdn.com/@sc04/kf/UTB8KAMBJ5DEXKJk43Oqq6Az3XXar.jpg_300x300.jpg"
                   className="card-img-top"
@@ -234,7 +240,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-6 col-lg-3 mb-4 mb-md-0 justify-content-around">
-              <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }}>
+              <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
                 <img
                   src="https://imgmedia.lbb.in/media/2022/01/61ea5d152f2ec63701609503_1642749205840.jpg"
                   className="card-img-top"

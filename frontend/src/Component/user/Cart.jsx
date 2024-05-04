@@ -46,7 +46,7 @@ const Cart = () => {
           {/* <p className="text-muted h6">{item.brand}</p> */}
           <h3 className=''><span className='fw-bold me-2' style={{ color: "teal", fontFamily: 'initial' }}>Title:</span> {item.title}</h3>
           <h3 className=''> <span className='fw-bold me-2' style={{ color: "teal", fontFamily: 'initial' }}>Price:</span> {item.price}</h3>
-          <p className=""><span className='fw-bold me-2' style={{ color: "teal", fontFamily: 'initial' }}>Description:</span> {item.description}</p>
+          {/* <p className=""><span className='fw-bold me-2' style={{ color: "teal", fontFamily: 'initial' }}>Description:</span> {item.description}</p> */}
         </div>
         <div className="col-3 py-3">
           <div className="input-group">
