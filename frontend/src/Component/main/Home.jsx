@@ -556,37 +556,7 @@ const Home = () => {
           Tutorials
         </h1>
 
-        {/* <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-             <video src="../vid.mp4" controls style={{height:"30rem", marginLeft:"19rem"}} ></video>
-            </div>
-            <div className="carousel-item">
-             <video src="../vid2.mp4"  controls style={{height:"30rem", marginLeft:"19rem"}}></video>
-            </div>
-            <div className="carousel-item">
-             <video src="../vid3.mp4" controls style={{height:"30rem", marginLeft:"19rem"}}></video>
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="prev"
-          >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="next"
-          >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div> */}
+     
 
 
         <div

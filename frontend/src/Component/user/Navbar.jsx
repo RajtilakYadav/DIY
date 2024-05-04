@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import useProductContext from '../../context/ProductContext'
-import useUserContext from '../../UserContext';
+import useUserContext from '../../context/UserContext';
 import './Navbar.css'
 
 const Navbar = () => {

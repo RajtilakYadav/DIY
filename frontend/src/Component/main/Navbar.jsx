@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useProductContext from '../../context/ProductContext'
-import useUserContext from '../../UserContext';
+import useUserContext from '../../context/UserContext';
 import './Navbar.css'
 
 const Navbar = () => {
+
+  
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  }
+
   const { getCartItemsCount } = useProductContext();
-  const { loggedIn, logout } = useUserContext();
+  const { loggedIn, logout,currentUser } = useUserContext();
   console.log(loggedIn);
 
   const showLoggedIn = () => {
@@ -14,7 +22,60 @@ const Navbar = () => {
       return (
         <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
           <li className='nav-item'>
-            <button className='btn btn-danger' onClick={logout}>Logout</button>
+          <>
+          <button
+            id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown"
+            className="text-white   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="button"
+            onClick={toggleDropdown}
+          >
+            <img
+              className="inline-block flex-shrink-0 size-[50px] rounded-full"
+              src={`http://localhost:3000/${currentUser.avatar}`}
+              alt="Image Description"
+            />
+
+          </button>
+          {isOpen && (
+            <div
+              id="dropdown"
+              className="z-10 hidden card  bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+            >
+              <ul
+
+                className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="dropdownDefaultButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    {currentUser.name}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    {currentUser.email}
+                  </a>
+                </li>
+
+                <li>
+                  <button onClick={logout}
+
+                    className="d-block px-4 py-2 bg-danger  text-white"
+                  >
+                    Sign out
+                  </button>
+                </li>
+              </ul>
+            </div>
+          )}
+        </>
           </li>
         </ul>
       )

@@ -16,7 +16,7 @@ import ManageUser from "./Component/admin/ManageUser";
 import Video from "./Component/user/Video";
 import ManageProduct from "./Component/admin/ManageProduct";
 // import UpdateProduct from "./Component/UpdateProduct";
-import { UserProvider } from "./UserContext";
+import { UserProvider } from "./context/UserContext";
 import Cart from "./Component/user/Cart";
 import ContactUs from "./Component/main/ContactUs";
 import Feedback from "./Component/main/Feedback";
@@ -30,6 +30,7 @@ import OrderHistory from "./Component/user/Orders";
 import ThankYou from "./Component/user/Thankyou";
 import Checkout from "./Component/Checkout/Checkout";
 import ForgetPassword from "./Component/user/ForgetPassword";
+import UserProfile from "./Component/user/UserProfile";
 
 
 
@@ -64,6 +65,7 @@ const App = () => {
                   <Route path="view/:id" element={<View />} />
                   <Route path="order" element={<OrderHistory />} />
                   <Route path="thankyou" element={<ThankYou />} />
+                  <Route path="userprofile" element={<UserProfile />} />
                   <Route path="forgetpassword" element={<ForgetPassword />} />
                 </Route>
 

@@ -3,11 +3,12 @@ import  './Login.css'
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import {Link, useNavigate} from 'react-router-dom'
-import useUserContext from '../../UserContext';
+import useUserContext from '../../context/UserContext';
 
 const Login =()=> {
   
   const navigate = useNavigate()
+  const { setCurrentUser } = useUserContext();
 
   const loginForm = useFormik({
     initialValues: {
@@ -32,10 +33,11 @@ const Login =()=> {
       if (res.status === 200){
         enqueueSnackbar('User Login Successfully', {variant: 'success'})
         navigate("/main/home")
-        setLoggedIn(true)
         const data = await res.json()
         console.log(data)
         sessionStorage.setItem('user',JSON.stringify(data))
+        setLoggedIn(true)
+        setCurrentUser(data)
       } else {
         enqueueSnackbar('User not login', {variant: 'error'})
       }
