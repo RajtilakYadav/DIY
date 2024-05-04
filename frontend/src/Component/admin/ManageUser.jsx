@@ -1,5 +1,15 @@
-import { enqueueSnackbar } from 'notistack';
+
 import React,{useState, useEffect} from 'react'
+
+
+
+// const ManageUser = () => {
+//   return (
+//     <div>ManageUser</div>
+
+import { enqueueSnackbar } from 'notistack';
+
+
 
 const ManageUser = () => {
     const [Data, setData] = useState([]);
@@ -76,4 +86,4 @@ const ManageUser = () => {
   )
 }
 
-export default ManageUser
+export default ManageUser;

@@ -100,10 +100,7 @@ const ContactUs = () => {
               <div className="map_inner">
                 <h4>Find Us on Google Map</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-                  quo beatae quasi assumenda, expedita aliquam minima tenetur
-                  maiores neque incidunt repellat aut voluptas hic dolorem sequi ab
-                  porro, quia error.
+                  
                 </p>
                 <div className="map_bind">
                   <iframe

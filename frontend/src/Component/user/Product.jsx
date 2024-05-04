@@ -9,26 +9,26 @@ const Product = () => {
   const [rating, setrating] = useState([]);
 
   const fetchProduct = async () => {
-    const res = await fetch("http://localhost:3000/product/getall")
+    const res = await fetch("http://localhost:3000/product/getall");
     console.log(res.status);
     const data = await res.json();
-    console.log(data)
-    setProduct(data)
+    console.log(data);
+    setProduct(data);
     setMasterList(data);
-  }
+  };
 
   useEffect(() => {
-    fetchProduct()
-  }, [])
+    fetchProduct();
+  }, []);
 
   const applysearch = (e) => {
     const inputText = e.target.value;
-    setProduct(masterList.filter((equipment) => {
-      return equipment.title.toLowerCase().includes(inputText.toLowerCase());
-    }));
-
-  }
-
+    setProduct(
+      masterList.filter((equipment) => {
+        return equipment.title.toLowerCase().includes(inputText.toLowerCase());
+      })
+    );
+  };
 
   // const fetchRating = async () => {
   //   const res = await fetch("http://localhost:3000/feedback/getall")
@@ -43,24 +43,62 @@ const Product = () => {
   // }, [])
 
   const filterByCategory = (category) => {
+<<<<<<< HEAD
+    const filteredProducts = masterList.filter(
+      (producr) => product.category === category
+    );
+    setProduct(filteredProducts);
+  };
+=======
 
-    const filteredProducts = masterList.filter(product => product.title === category);
+    const filteredProducts = masterList.filter(product => product.category === category);
     setProduct(filteredProducts);
 
   }
 
 
+>>>>>>> 202f47b4021a27bbbd4b8968be9b3e4cedc3048b
 
   return (
     <div>
-
       <div className="container">
         <div className="row">
           <div className="col-md-2" style={{marginTop:"10rem"}}>
             <h4 className="fw-bold my-4">Filter Category</h4>
             {/* <h3 className="my-2 ">Category</h3> */}
             <div className="d-flex mb-1">
-              <input type="checkbox" className="" id="home" value='a' onChange={(e) => filterByCategory("Home Decore")} />
+<<<<<<< HEAD
+              <input
+                type="checkbox"
+                className=""
+                id="home"
+                value="a"
+                onChange={(e) => filterByCategory("Home Decore")}
+              />
+              <label for="home" className="ms-3 my-1">
+                Home Decore
+              </label>
+            </div>
+            <div className="d-flex mb-1">
+              <input type="checkbox" className="" id="hand" value="b" />
+              <label for="hand" className="ms-3 my-1">
+                HandiCrafts
+              </label>
+            </div>
+            <div className="d-flex mb-1">
+              <input type="checkbox" className="" id="kit" value="c" />
+              <label for="kit" className="ms-3 my-1">
+                KitchenWare
+              </label>
+            </div>
+            <div className="d-flex mb-1">
+              <input type="checkbox" className="" id="gar" value="d" />
+              <label for="gar" className="ms-3 my-1">
+                Gardening
+              </label>
+            </div>
+=======
+              <input type="checkbox" className="" id="home" value='a' onChange={(e) => filterByCategory("Home Decor")} />
               <label for='home' className="ms-3 my-1 fw-bold">Home Decor</label>
             </div>
             <div className="d-flex mb-1">
@@ -78,10 +116,9 @@ const Product = () => {
 
 
 
+>>>>>>> 202f47b4021a27bbbd4b8968be9b3e4cedc3048b
           </div>
           <div className="col-md-10">
-
-
             <div className="container py-5">
               <div className="input-group w-100  py-4">
                 <span className="border-warning input-group-text bg-warning text-white">
@@ -96,6 +133,58 @@ const Product = () => {
                 <button className="btn btn-warning text-white">Search</button>
               </div>
               <div className="row">
+<<<<<<< HEAD
+                {product.map((pro) => {
+                  return (
+                    <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
+                      <div className="card ">
+                        <img
+                          src={"http://localhost:3000/" + pro.image}
+                          className="card-img-top"
+                          alt="Laptop"
+                          style={{ height: 200 }}
+                        />
+                        <div className="card-body">
+                          <div className="d-flex justify-content-between ">
+                            <p className="small">
+                              <a href="#!" className="text-muted">
+                                Craft
+                              </a>
+                            </p>
+                            <p className="small text-danger">
+                              <s>
+                                <span>₹</span>
+                                {pro.price}
+                              </s>
+                            </p>
+                          </div>
+                          <div className="d-flex justify-content-between mb-3">
+                            <h5 className="mb-0">
+                              <span>Title</span>
+                              {pro.title}
+                            </h5>
+                          </div>
+                          <div className="d-flex justify-content-between mb-2">
+                            <p className="text-muted mb-0">
+                              Available: <span className="fw-bold">6</span>
+                            </p>
+                            {/* <div className="ms-auto text-warning">
+                    <i className="fa fa-star" />
+                    <i className="fa fa-star" />
+                    <i className="fa fa-star" />
+                    <i className="fa fa-star" />
+                    <i className="fa fa-star" />
+                  </div> */}
+                            {/* {
+                                rating.map((rat) => {
+                                  return (
+                                    <div>
+                                      {rat.rating}
+                                    </div>
+                                  )
+                                })
+                              } */}
+=======
 
                 {
                   product.map((pro) => {
@@ -112,13 +201,13 @@ const Product = () => {
                             <div className="d-flex justify-content-between">
                               <p className="small">
                                 <a  className="text-dark fw-bold fs-5">
-                                  {pro.title}
+                                  {pro.category}
                                 </a>
                               </p>
                              
                             </div>
                             <div className="d-flex justify-content-between mb-2">
-                              <h5 className="">{pro.category}</h5>
+                              <h5 className="">{pro.title}</h5>
 
                             </div>
                             <div>
@@ -148,20 +237,29 @@ const Product = () => {
                               </span>
                             </button>
                             <Link to={"/user/view/" +pro._id} className="btn btn-primary px-5">View</Link>
+>>>>>>> 202f47b4021a27bbbd4b8968be9b3e4cedc3048b
                           </div>
                         </div>
+                        <div className="card-footer">
+                          <button
+                            disabled={isInCart(pro)}
+                            onClick={(e) => addItemToCart(pro)}
+                            className="btn btn-outline-primary"
+                          >
+                            <span>
+                              {isInCart(pro) ? "Already Added" : "Add to cart"}
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                    )
-                  })
-                }
-
+                    </div>
+                  );
+                })}
               </div>
             </div>
-
           </div>
         </div>
       </div>
-
     </div>
   );
 };

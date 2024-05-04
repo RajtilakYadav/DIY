@@ -62,7 +62,7 @@ function Checkout() {
 
     return (
         <Container>
-            <Card>
+            <Card className='mt-4 mb-2'>
                 <Card.Body>
                     <Card.Title>Product Details</Card.Title>
                     <hr />
@@ -100,7 +100,7 @@ function Checkout() {
                     </Form>
                 </Card.Body>
             </Card>
-            <Button variant="primary" onClick={getPaymentIntent}>Pay Now</Button>
+            <Button className='my-3 btn btn-primary' variant="primary" onClick={getPaymentIntent}>Pay Now</Button>
             {clientSecret && (
                 <Elements stripe={stripePromise} options={{
                     clientSecret,
