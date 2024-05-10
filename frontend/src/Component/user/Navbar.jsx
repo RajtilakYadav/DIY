@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <div className='d-flex ms-4 mt-3'>
             <a className="navbar-brand" href="#">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi9cZzhw1U4yXFA82psxthYe8s2PQwz5uW3M2Y7OXItw&s" alt="" style={{ height: 50 }} />
+              <img src="../logo.png" alt="" style={{ height: 50, marginBottom:"20px" }} />
             </a>
           </div>
           <button

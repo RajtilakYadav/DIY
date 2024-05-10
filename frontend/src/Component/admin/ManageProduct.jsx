@@ -81,7 +81,7 @@ const ManageProduct = () => {
   return (
     <div>
       <div className="container">
-        <h1 className='text-center fw-bold text-danger my-04 fs-2'>Manage Product</h1>
+        <h1 className='text-center fw-bold fs-2 my-4'>Manage Product</h1>
         {
           displayProduct()
         }

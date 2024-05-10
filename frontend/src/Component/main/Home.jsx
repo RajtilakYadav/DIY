@@ -814,9 +814,10 @@ const Home = () => {
                     <div className="footer-logo">
                       <a href="index.html">
                         <img
-                          src="../Diy logo.png"
+                          src="../logo.png"
                           className="img-fluid"
                           alt="logo"
+                          
                         />
                       </a>
                     </div>
