@@ -224,9 +224,9 @@ const UserProfile = () => {
                             <div className="col-md-12 ">
                                 <div className="card mb-4 mb-md-0 ">
                                    
-                                            <Formik initialValues={currentUser} onSubmit={updateProfile}>
+                                       <Formik initialValues={currentUser} onSubmit={updateProfile}>
                                                 {
-                                                    (updateProfile) => {
+                                                    (updateProfile) => (
 
                                                         <form className='w-50 mx-auto py-3' onSubmit={updateProfile.handleSubmit}>
                                                             <div className="mb-3">
@@ -272,7 +272,7 @@ const UserProfile = () => {
                                                                 Update Profile
                                                             </button>
                                                         </form>
-                                                    }
+                                                    )
                                                 }
 
                                             </Formik>

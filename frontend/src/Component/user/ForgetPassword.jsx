@@ -79,9 +79,11 @@ const ForgetPassword = () => {
     return (
         <div>
             <div className=' d-flex justify-content-center' style={{marginTop:"110px"}}>
-                <div className='w-50 px-5'>
+               
+                <div className='w-25 px-5'>
+                <h3 className='mb-3 text-center'>Reset Password</h3>
                     <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">
+                        <label htmlFor="exampleInputEmail1" className="text-dark form-label">
                             Email address
                         </label>
                         <input
@@ -94,12 +96,12 @@ const ForgetPassword = () => {
 
                     </div>
                     <div className='mb-2'>
-                        <button onClick={sendOTP} type="submit" className="btn btn-primary">
+                        <button onClick={sendOTP} type="submit" className="w-100 btn btn-primary">
                             Send OTP
                         </button>
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label">
+                        <label htmlFor="exampleInputPassword1" className="text-dark form-label">
                             Enter OTP
                         </label>
                         <input
@@ -110,7 +112,7 @@ const ForgetPassword = () => {
                         />
                     </div>
                     <div className='mb-2'>
-                        <button onClick={verifyOTP} type="submit" className="btn btn-primary">
+                        <button onClick={verifyOTP} type="submit" className="w-100 btn btn-primary">
                             Verify OTP
                         </button>
                     </div>
@@ -125,7 +127,7 @@ const ForgetPassword = () => {
                                     <label htmlFor="" className='form-label'>Confirm Password</label>
                                     <input type="text" id='confirmPassword' value={resetForm.values.confirmPassword} onChange={resetForm.handleChange} className="form-control" />
                                 </div>
-                                <button type="submit" className="btn btn-primary">
+                                <button type="submit" className="w-100 btn btn-primary">
                                     Submit
                                 </button>
                             </form>
