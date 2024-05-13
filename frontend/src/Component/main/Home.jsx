@@ -57,8 +57,8 @@ const Home = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <section className="bsb-hero-2 " style={{ height: "60vh" }}>
-              <div className="container overflow-hidden w-100 justify-content-center">
+            <section className="bsb-hero-2  ">
+              <div className="container overflow-hidden w-100 h-100 justify-content-center">
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
                     <h3 className="display-3 fw-bold mb-3" style={{ fontSize: 50 }}>
@@ -79,9 +79,9 @@ const Home = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="col-12 col-lg-6 text-center" style={{ height: 400 }}>
+                  <div className="col-12 col-lg-6 text-center" style={{ height: 550 }}>
                     <img
-                      className="img-fluid mt-5"
+                      className="img-fluid justify-content-center"
                       src="https://cdn3d.iconscout.com/3d/premium/thumb/carpenter-using-woodworking-tools-for-craft-work-in-carpentry-workshop-9246249-7622026.png"
                       alt="Art of Design"
                     />
@@ -91,30 +91,31 @@ const Home = () => {
             </section>
           </SwiperSlide>
           <SwiperSlide>
-            <section className="bsb-hero-2 " style={{ height: "60vh" }}>
-              <div className="container overflow-hidden w-100 justify-content-center">
+            <section className="bsb-hero-2  ">
+              <div className="container overflow-hidden w-100 h-100 justify-content-center">
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
                     <h3 className="display-3 fw-bold mb-3" style={{ fontSize: 50 }}>
                       Hands On Guidance
                     </h3>
                     <p className="fs-4 mb-5" style={{ fontSize: 25 }}>
-                      Guiding you step-by-step towards DIY mastery through video tutorials.
+                     Guiding you step-by-step towards DIY mastery through video tutorials.
                     </p>
-                    <div className="d-grid gap-2 d-sm-flex">
+                    <div className="d-grid gap-2 d-sm-flex ">
                       <Link
-                        to={"/user/Video"}
+                        to={"/user/Product"}
                         type="button"
-                        className="btn btn-primary bsb-btn-xl px-5 fs-5 rounded-pill py-3"
+                        className="btn btn-primary bsb-btn-xl px-5 fs-5 rounded-pill py-3  "
                         style={{ height: 60, fontFamily: "serif" }}
+
                       >
                         Explore
                       </Link>
                     </div>
                   </div>
-                  <div className="col-12 col-lg-6 text-center" style={{ height: 400 }}>
+                  <div className="col-12 col-lg-6 text-center" style={{ height: 550 }}>
                     <img
-                      className="img-fluid"
+                      className="img-fluid my-1 justify-content-center"
                       src="https://static.vecteezy.com/system/resources/previews/015/340/595/original/music-producer-3d-character-illustration-png.png"
                       alt="Art of Design"
                     />
@@ -124,8 +125,8 @@ const Home = () => {
             </section>
           </SwiperSlide>
           <SwiperSlide>
-            <section className="bsb-hero-2 " style={{ height: "60vh" }}>
-              <div className="container overflow-hidden w-100 justify-content-center">
+            <section className="bsb-hero-2 " >
+              <div className="container overflow-hidden w-100 h-75 justify-content-center">
                 <div className="row  align-items-lg-center justify-content-lg-between">
                   <div className="col-12 col-lg-6 order-1 order-lg-0">
                     <h3 className="display-3 fw-bold mb-3" style={{ fontSize: 50 }}>
@@ -145,9 +146,9 @@ const Home = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="col-12 col-lg-6 text-center" style={{ height: 400 }}>
+                  <div className="col-12 col-lg-6 text-center" style={{ height: 550 }}>
                     <img
-                      className="img-fluid mt-5"
+                      className="img-fluid justify-content-center"
                       src="https://3dbay.io/files/preview/1280x853/11681835850e1uo4bi142gev1aj4wzjaignq40knhnzaxcwq8owff57pdvmhpoih3kmnldd9fazvfvsdd42xaebw4e1fkf8i0igdj4avr4tkuqd.png"
                       alt="Art of Design"
                     />
@@ -168,9 +169,9 @@ const Home = () => {
           >
             Categories
           </h1>
-        <div className="container justify-content-around py-5 ">
-          <div className="row" style={{ marginLeft: 30 }}>
-            <div className="col-md-12 col-lg-3 mb-4 mb-lg-0 justify-content-around">
+        <div className="container justify-content-center py-5 ">
+          <div className="row" style={{ marginLeft: 50 }}>
+            <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
               <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
                 <img
                   src="https://5.imimg.com/data5/SELLER/Default/2023/1/HG/HN/SQ/43676305/handmade-decorative-door-wall-hanging-500x500.jpeg"
@@ -193,8 +194,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3 mb-4 mb-md-0 justify-content-around">
-              <div className="card shadow p-3 mb-53 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
+            <div className="col-md-6 col-lg-3 mb-4 mb-md-0 ">
+              <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
                 <img
                   src="https://assets.wfcdn.com/im/48864981/resize-h380-w380%5Ecompr-r70/2138/213853538/default_name.jpg"
                   className="card-img-top"
@@ -216,7 +217,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3 mb-4 mb-md-0 justify-content-around">
+            <div className="col-md-6 col-lg-3 mb-4 mb-md-0 ">
               <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
                 <img
                   src=" https://s.alicdn.com/@sc04/kf/UTB8KAMBJ5DEXKJk43Oqq6Az3XXar.jpg_300x300.jpg"
@@ -239,7 +240,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3 mb-4 mb-md-0 justify-content-around">
+            <div className="col-md-6 col-lg-3 mb-4 mb-md-0 ">
               <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
                 <img
                   src="https://imgmedia.lbb.in/media/2022/01/61ea5d152f2ec63701609503_1642749205840.jpg"
@@ -745,34 +746,41 @@ const Home = () => {
           </div>
         </div> */}
       </section>
-      {/* Hero 2 - Bootstrap Brain Component */}
-      <section className="bsb-hero-3 px-3 mt-5 mb-5">
-        <div className="container overflow-hidden">
-          <div
-            className="row gy-3 gy-lg-0 align-items-lg-center justify-content-lg-between w-100"
-            style={{ height: 320 }}
-          >
-            <div className="col-12 col-lg-5 text-center shadow p-3 mb-5 bg-white rounded">
-              <img
-                className="img-fluid"
-                loading="lazy"
-                src="https://cdn.dribbble.com/userupload/12346393/file/original-78e7d991c0cb0cde31d7e6d4b735a862.png?resize=1504x1128"
-                alt="Art of Design"
-                style={{ height: 250 }}
-              />
-            </div>
-            <div className="col-12 col-lg-6 order-1 order-lg-0">
-              <h2 className="display-3 fw-bold mb-3" style={{ fontSize: 30 }}>
-                About Us
-              </h2>
-              <p className=" mb-5" style={{ fontSize: 18 }}>
-                At DIY Innovate, we believe that everyone has a creative spark waiting to be ignited. Our mission is to provide you with the tools, materials, and inspiration you need to transform your creative ideas into reality.
-              </p>
-            </div>
-          </div>
+      {/* Hero 2 */}
+      <section className="py-3 py-lg-5 py-xl-8">
+  <div className="container overflow-hidden">
+    <div className="row gy-5 gy-lg-0 align-items-lg-center justify-content-lg-between">
+      <div className="col-12 col-lg-5 text-center">
+        <div className="position-relative">
+          <img
+            className="img-fluid position-relative z-2 mt-5 mb-3"
+            loading="lazy"
+            src="https://cdn.dribbble.com/userupload/12346393/file/original-78e7d991c0cb0cde31d7e6d4b735a862.png?resize=1504x1128"
+            alt="Art of Design"
+            style={{ height: 300, width:470 }}
+          />
         </div>
-      </section>
-      {/* Footer 2 - Bootstrap Brain Component */}
+      </div>
+      <div className="col-12 col-lg-7 order-1 order-lg-0">
+        <h2
+          classname="display-3 fw-bold mb-4 "
+          style={{ fontSize: 40, textAlign: "center" }}
+        >
+          About Us
+        </h2>
+        <p className=" mb-5 mt-4" style={{ font: "size 80px" }}>
+          {" "}
+          At DIY Innovate, we believe that everyone has a creative spark waiting
+          to be ignited. Our mission is to provide you with the tools,
+          materials, and inspiration you need to transform your creative ideas
+          into reality.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* Footer 2 */}
       <section>
         <footer className="footer-section">
           <div className="container">
