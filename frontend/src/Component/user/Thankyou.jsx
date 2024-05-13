@@ -63,7 +63,7 @@ const ThankYou = () => {
     return (
         <div>
             {/* <Navbar /> */}
-            <Container fluid="md">
+            <Container fluid="md" style={{marginTop:"100px"}}>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh', flexDirection: 'column' }}>
                     {
                         params.get('redirect_status') === 'succeeded' ?
@@ -74,7 +74,7 @@ const ThankYou = () => {
                                     <p style={{ fontSize: '18px' }}>Your order has been placed successfully.</p>
                                     <p style={{ fontSize: '18px' }}>We've sent a confirmation email to your email address.</p>
                                 </div>
-                                <Button variant='primary' style={{ marginTop: '20px' }} as={Link} to="/">Go to Home</Button>
+                                <Button variant='primary' style={{ marginTop: '20px' }} as={Link} to="/user/order">See Orders</Button>
                             </>
                             :
                             <>
@@ -82,7 +82,7 @@ const ThankYou = () => {
                                 <h2>Payment Failed</h2>
                                 <p>Your payment was not successful. Please try again.</p>
                                 <p>If the problem persists, please contact us.</p>
-                                <Button variant='primary' style={{ marginTop: '20px' }} as={Link} to="/">Go to Home</Button>
+                                <Button variant='primary' style={{ marginTop: '20px' }} as={Link} to="/">Go to orders</Button>
                             </>
                     }
                 </div>

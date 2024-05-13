@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useParams, Link} from 'react-router-dom'
 
 const View = () => {
+  
     const {id} = useParams();
     const [product, setProduct] = useState({});
 
@@ -20,7 +21,7 @@ const View = () => {
 
   return (
     <div>
-       <div className="container ">
+       <div className="container " style={{marginTop:"100px"}}>
       <Link to={"/user/product"} className='btn btn-outline-primary rounded-pill px-3 my-4  '><i className=" px-2 bi bi-arrow-left-circle "></i>Products</Link>
 
         {

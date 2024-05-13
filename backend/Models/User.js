@@ -5,7 +5,7 @@ const userSchema = new Schema({
     email: String,
     password: String,
     cpassword: String,
-    avatar:{type: String, default:"avatar.avif"}
+    avatar:{type: String, default:"avatar.jpeg"}
 });
 
 module.exports = model("user", userSchema)

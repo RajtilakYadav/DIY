@@ -30,26 +30,9 @@ const Product = () => {
     );
   };
 
-  // const fetchRating = async () => {
-  //   const res = await fetch("http://localhost:3000/feedback/getall")
-  //   console.log(res.status);
-  //   const data = await res.json();
-  //   console.log(data);
-  //   setrating(data);
-  // }
 
-  // useEffect(() => {
-  //   fetchRating()
-  // }, [])
 
   const filterByCategory = (category) => {
-<<<<<<< HEAD
-    const filteredProducts = masterList.filter(
-      (producr) => product.category === category
-    );
-    setProduct(filteredProducts);
-  };
-=======
 
     const filteredProducts = masterList.filter(product => product.category === category);
     setProduct(filteredProducts);
@@ -57,47 +40,15 @@ const Product = () => {
   }
 
 
->>>>>>> 202f47b4021a27bbbd4b8968be9b3e4cedc3048b
 
   return (
     <div>
-      <div className="container">
+      <div className="container mt-5">
         <div className="row">
-          <div className="col-md-2" style={{marginTop:"10rem"}}>
+          <div className="col-md-2 sticky" style={{marginTop:"10rem", position:"fixed"}}>
             <h4 className="fw-bold my-4">Filter Category</h4>
             {/* <h3 className="my-2 ">Category</h3> */}
             <div className="d-flex mb-1">
-<<<<<<< HEAD
-              <input
-                type="checkbox"
-                className=""
-                id="home"
-                value="a"
-                onChange={(e) => filterByCategory("Home Decore")}
-              />
-              <label for="home" className="ms-3 my-1">
-                Home Decore
-              </label>
-            </div>
-            <div className="d-flex mb-1">
-              <input type="checkbox" className="" id="hand" value="b" />
-              <label for="hand" className="ms-3 my-1">
-                HandiCrafts
-              </label>
-            </div>
-            <div className="d-flex mb-1">
-              <input type="checkbox" className="" id="kit" value="c" />
-              <label for="kit" className="ms-3 my-1">
-                KitchenWare
-              </label>
-            </div>
-            <div className="d-flex mb-1">
-              <input type="checkbox" className="" id="gar" value="d" />
-              <label for="gar" className="ms-3 my-1">
-                Gardening
-              </label>
-            </div>
-=======
               <input type="checkbox" className="" id="home" value='a' onChange={(e) => filterByCategory("Home Decor")} />
               <label for='home' className="ms-3 my-1 fw-bold">Home Decor</label>
             </div>
@@ -116,9 +67,8 @@ const Product = () => {
 
 
 
->>>>>>> 202f47b4021a27bbbd4b8968be9b3e4cedc3048b
           </div>
-          <div className="col-md-10">
+          <div className="col-md-10" style={{marginLeft:"210px"}}>
             <div className="container py-5">
               <div className="input-group w-100  py-4">
                 <span className="border-warning input-group-text bg-warning text-white">
@@ -133,63 +83,11 @@ const Product = () => {
                 <button className="btn btn-warning text-white">Search</button>
               </div>
               <div className="row">
-<<<<<<< HEAD
-                {product.map((pro) => {
-                  return (
-                    <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
-                      <div className="card ">
-                        <img
-                          src={"http://localhost:3000/" + pro.image}
-                          className="card-img-top"
-                          alt="Laptop"
-                          style={{ height: 200 }}
-                        />
-                        <div className="card-body">
-                          <div className="d-flex justify-content-between ">
-                            <p className="small">
-                              <a href="#!" className="text-muted">
-                                Craft
-                              </a>
-                            </p>
-                            <p className="small text-danger">
-                              <s>
-                                <span>₹</span>
-                                {pro.price}
-                              </s>
-                            </p>
-                          </div>
-                          <div className="d-flex justify-content-between mb-3">
-                            <h5 className="mb-0">
-                              <span>Title</span>
-                              {pro.title}
-                            </h5>
-                          </div>
-                          <div className="d-flex justify-content-between mb-2">
-                            <p className="text-muted mb-0">
-                              Available: <span className="fw-bold">6</span>
-                            </p>
-                            {/* <div className="ms-auto text-warning">
-                    <i className="fa fa-star" />
-                    <i className="fa fa-star" />
-                    <i className="fa fa-star" />
-                    <i className="fa fa-star" />
-                    <i className="fa fa-star" />
-                  </div> */}
-                            {/* {
-                                rating.map((rat) => {
-                                  return (
-                                    <div>
-                                      {rat.rating}
-                                    </div>
-                                  )
-                                })
-                              } */}
-=======
 
                 {
                   product.map((pro) => {
                     return (
-                      <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
+                      <div className="col-md-6 col-lg-4 mb-4 mb-md-0">
                         <div className="card shadow p-3 mb-5 bg-white rounded w-100">
                           <img
                             src={"http://localhost:3000/" + pro.image}
@@ -231,16 +129,15 @@ const Product = () => {
                             <button
                               disabled={isInCart(pro)}
                               onClick={(e) => addItemToCart(pro)}
-                              className="  btn btn-outline-primary mb-2">
+                              className="  btn btn-outline-primary ">
                               <span>
-                                {isInCart(pro) ? "Already Added" : "Add to Cart"}
+                                {isInCart(pro) ? " Added" : "Add to Cart"}
                               </span>
                             </button>
-                            <Link to={"/user/view/" +pro._id} className="btn btn-primary px-5">View</Link>
->>>>>>> 202f47b4021a27bbbd4b8968be9b3e4cedc3048b
+                            <Link to={"/user/view/" +pro._id} className="btn btn-primary px-4 ms-2">View</Link>
                           </div>
                         </div>
-                        <div className="card-footer">
+                        {/* <div className="card-footer">
                           <button
                             disabled={isInCart(pro)}
                             onClick={(e) => addItemToCart(pro)}
@@ -250,9 +147,9 @@ const Product = () => {
                               {isInCart(pro) ? "Already Added" : "Add to cart"}
                             </span>
                           </button>
-                        </div>
+                        </div> */}
                       </div>
-                    </div>
+                  
                   );
                 })}
               </div>

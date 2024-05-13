@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import useUserContext from '../../context/UserContext'
+
 import { enqueueSnackbar } from 'notistack';
+import { Formik } from 'formik';
 
 
 const UserProfile = () => {
@@ -75,39 +76,39 @@ const UserProfile = () => {
                     <div className="col-lg-4">
                         <div className="card mb-4">
                             <div className="card-body text-center">
-                            <div className=" mx-auto rounded bg-white p-10 mt-6">
-                                <img
-                                   
-                                    className="border-rounded rounded-full d-block m-auto"
-                                    style={{height:"120px",width:"120px",borderRadius:"50%"}}
-                                    src={
-                                        currentUser.avatar &&
-                                        `http://localhost:3000/${currentUser.avatar}`} alt="loading.." />
-                                {/* <hr className="mt-2 mb-2" /> */}
-                                <div>
-                                    <div className="text-center my-4">
-                                        <label
-                                            className="btn bg-white hover:bg-slate-200 w-100 mt-3"
-                                            htmlFor="upload-image"
-                                        >
-                                            {" "}
-                                            <i className="fas fa-pen"></i>&nbsp;Edit{" "}
-                                        </label>
-                                        <input
-                                            type="file"
-                                            hidden
-                                            onChange={uploadProfileImage}
-                                            id="upload-image"
-                                        />
+                                <div className=" mx-auto rounded bg-white p-10 mt-6">
+                                    <img
+
+                                        className="border-rounded rounded-full d-block m-auto"
+                                        style={{ height: "120px", width: "120px", borderRadius: "50%" }}
+                                        src={
+                                            currentUser.avatar &&
+                                            `http://localhost:3000/${currentUser.avatar}`} alt="loading.." />
+                                    {/* <hr className="mt-2 mb-2" /> */}
+                                    <div>
+                                        <div className="text-center my-4">
+                                            <label
+                                                className="btn bg-white hover:bg-slate-200 w-100 mt-3"
+                                                htmlFor="upload-image"
+                                            >
+                                                {" "}
+                                                <i className="fas fa-pen"></i>&nbsp;Edit{" "}
+                                            </label>
+                                            <input
+                                                type="file"
+                                                hidden
+                                                onChange={uploadProfileImage}
+                                                id="upload-image"
+                                            />
+                                        </div>
+                                        <p className="text-center text-2xl text-dark">
+                                            {/* <span className="mb-2">...</span> */}
+                                        </p>
+                                        <p className="text-center text-xl text-gray-500 m-4"> <span className="fw-bold">{currentUser.email}</span></p>
+
+
                                     </div>
-                                    <p className="text-center text-2xl text-dark">
-                                        {/* <span className="mb-2">...</span> */}
-                                    </p>
-                                    <p className="text-center text-xl text-gray-500 m-4"> <span className="fw-bold">{currentUser.email}</span></p>
-                                   
-                                   
                                 </div>
-                            </div>
                                 <h5 className="my-3">{currentUser.name}</h5>
                                 <p className="text-muted mb-1">{currentUser.email}</p>
                                 {/* <p className="text-muted mb-4">Bay Area, San Francisco, CA</p> */}
@@ -178,7 +179,7 @@ const UserProfile = () => {
                                         <p className="mb-0">Full Name</p>
                                     </div>
                                     <div className="col-sm-9">
-                                        <p className="text-muted mb-0">Johnatan Smith</p>
+                                        <p className="text-muted mb-0">{currentUser.name}</p>
                                     </div>
                                 </div>
                                 <hr />
@@ -187,7 +188,7 @@ const UserProfile = () => {
                                         <p className="mb-0">Email</p>
                                     </div>
                                     <div className="col-sm-9">
-                                        <p className="text-muted mb-0">example@example.com</p>
+                                        <p className="text-muted mb-0">{currentUser.email}</p>
                                     </div>
                                 </div>
                                 <hr />
@@ -220,160 +221,68 @@ const UserProfile = () => {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-md-6">
-                                <div className="card mb-4 mb-md-0">
-                                    <div className="card-body">
-                                        <p className="mb-4">
-                                            <span className="text-primary font-italic me-1">
-                                                assigment
-                                            </span>{" "}
-                                            Project Status
-                                        </p>
-                                        <p className="mb-1" style={{ fontSize: ".77rem" }}>
-                                            Web Design
-                                        </p>
-                                        <div className="progress rounded" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "80%" }}
-                                                aria-valuenow={80}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
-                                            Website Markup
-                                        </p>
-                                        <div className="progress rounded" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "72%" }}
-                                                aria-valuenow={72}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
-                                            One Page
-                                        </p>
-                                        <div className="progress rounded" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "89%" }}
-                                                aria-valuenow={89}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
-                                            Mobile Template
-                                        </p>
-                                        <div className="progress rounded" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "55%" }}
-                                                aria-valuenow={55}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
-                                            Backend API
-                                        </p>
-                                        <div className="progress rounded mb-2" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "66%" }}
-                                                aria-valuenow={66}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                    </div>
+                            <div className="col-md-12 ">
+                                <div className="card mb-4 mb-md-0 ">
+                                   
+                                            <Formik initialValues={currentUser} onSubmit={updateProfile}>
+                                                {
+                                                    (updateProfile) => {
+
+                                                        <form className='w-50 mx-auto py-3' onSubmit={updateProfile.handleSubmit}>
+                                                            <div className="mb-3">
+                                                                <label htmlFor="exampleInputEmail1" className="form-label">
+                                                                    Name
+                                                                </label>
+                                                                <input
+                                                                    type="text"
+                                                                    className="form-control"
+                                                                    id="name"
+                                                                    value={updateProfile.values.name}
+                                                                    onChange={updateProfile.handleChange}
+
+                                                                    aria-describedby="emailHelp"
+                                                                />
+
+                                                            </div>
+                                                            <div className="mb-3">
+                                                                <label htmlFor="exampleInputPassword1" className="form-label ">
+                                                                    Email
+                                                                </label>
+                                                                <input
+                                                                    type="email"
+                                                                    className="form-control"
+                                                                    id="email"
+                                                                    value={updateProfile.values.email}
+                                                                    onChange={updateProfile.handleChange}
+                                                                />
+                                                            </div>
+                                                            <div className="mb-3">
+                                                                <label htmlFor="exampleInputPassword1" className="form-label ">
+                                                                    Upload Image
+                                                                </label>
+                                                                <input
+                                                                    type="file"
+                                                                    className="form-control"
+                                                                    id="exampleInputPassword1"
+                                                                    onChange={uploadProfileImage}
+                                                                />
+                                                            </div>
+
+                                                            <button type="submit" className="w-100 btn btn-primary">
+                                                                Update Profile
+                                                            </button>
+                                                        </form>
+                                                    }
+                                                }
+
+                                            </Formik>
+                                      
+
+
+
                                 </div>
                             </div>
-                            <div className="col-md-6">
-                                <div className="card mb-4 mb-md-0">
-                                    <div className="card-body">
-                                        <p className="mb-4">
-                                            <span className="text-primary font-italic me-1">
-                                                assigment
-                                            </span>{" "}
-                                            Project Status
-                                        </p>
-                                        <p className="mb-1" style={{ fontSize: ".77rem" }}>
-                                            Web Design
-                                        </p>
-                                        <div className="progress rounded" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "80%" }}
-                                                aria-valuenow={80}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
-                                            Website Markup
-                                        </p>
-                                        <div className="progress rounded" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "72%" }}
-                                                aria-valuenow={72}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
-                                            One Page
-                                        </p>
-                                        <div className="progress rounded" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "89%" }}
-                                                aria-valuenow={89}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
-                                            Mobile Template
-                                        </p>
-                                        <div className="progress rounded" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "55%" }}
-                                                aria-valuenow={55}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                        <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
-                                            Backend API
-                                        </p>
-                                        <div className="progress rounded mb-2" style={{ height: 5 }}>
-                                            <div
-                                                className="progress-bar"
-                                                role="progressbar"
-                                                style={{ width: "66%" }}
-                                                aria-valuenow={66}
-                                                aria-valuemin={0}
-                                                aria-valuemax={100}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>

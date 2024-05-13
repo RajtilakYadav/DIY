@@ -25,9 +25,9 @@ const OrderHistory = () => {
 
   return (
     <Container>
-      <h1 className="text-center my-5">Order History</h1>
+      <h1 className="text-center" style={{marginTop:"100px"}}>Order History</h1>
 
-      <div className="p-4 shadow-lg">
+      <div className="p-4 shadow bg-white">
         {loading ? (
           <Spinner animation="border" />
         ) : (
@@ -45,6 +45,7 @@ const OrderHistory = () => {
                 <p>Amount: ₹{order.details.amount/100}</p>
                 <p>Payment Status: {order.paymentStatus}</p>
               </Col>
+              <hr />
             </Row>
           ))
         )}

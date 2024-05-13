@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import './Feedback.css'
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
-import StarRatings from 'react-star-ratings';
+import ReactStars from "react-rating-stars-component";
+// import StarRatingComponent from 'react-star-rating-component';
+
+
 
 
 const Feedback = () => {
@@ -18,6 +21,7 @@ const Feedback = () => {
     // Step4 : what happens when form is submitted
     onSubmit: async (values, action) => {
       console.log(values);
+      values.rating = rating
       const res = await fetch("http://localhost:3000/feedback/add", {
         method: 'POST',
         body: JSON.stringify(values),
@@ -53,7 +57,7 @@ const Feedback = () => {
             <h5 className="title">Feedback</h5>
             <p className="description">
               Feel free to share your valuable feedback
-              
+
             </p>
             <div>
               <input
@@ -89,15 +93,15 @@ const Feedback = () => {
                 required=""
                 defaultValue={""}
               />
-              <StarRatings
-                rating={rating}
-                starRatedColor="yellow"
-                changeRating={setRating}
-                numberOfStars={5}
+              <div>
+                <ReactStars
+                  rating={rating}
+                  onChange={setRating}
+                  size={30}
+                  activeColor="#ffd700"
+                />
+              </div>
 
-
-
-              />
             </div>
             <div className="submit-button-wrapper mt-3">
               <input type="submit" defaultValue="Send" />

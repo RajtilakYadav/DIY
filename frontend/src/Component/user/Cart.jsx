@@ -63,7 +63,7 @@ const Cart = () => {
 
   return (
     <div>
-      <div className="container my-3">
+      <div className="container" style={{marginTop:"100px"}}>
         <div className="card vh-80 shadow">
           <div className="row g-0">
             <div className="col-md-9">
