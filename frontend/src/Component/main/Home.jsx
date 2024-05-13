@@ -295,8 +295,8 @@ const Home = () => {
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
-                      <h5 className="mb-0">Elephant Vase</h5>
-                      <h5 className="text-dark mb-0">$999</h5>
+                      <h5 className="mb-0">Elephant Pot</h5>
+                      <h5 className="text-dark mb-0">₹500</h5>
                     </div>
                     <div className="d-flex justify-content-between mb-2">
                       <p className="text-muted mb-0">
@@ -332,8 +332,8 @@ const Home = () => {
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
-                      <h5 className="mb-0">Cat Vase</h5>
-                      <h5 className="text-dark mb-0">$1099</h5>
+                      <h5 className="mb-0">Cat Pot</h5>
+                      <h5 className="text-dark mb-0">₹550</h5>
                     </div>
                     <div className="d-flex justify-content-between mb-2">
                       <p className="text-muted mb-0">
@@ -369,8 +369,8 @@ const Home = () => {
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
-                      <h5 className="mb-0">Camel Vase</h5>
-                      <h5 className="text-dark mb-0">$1299</h5>
+                      <h5 className="mb-0">Camel Pot</h5>
+                      <h5 className="text-dark mb-0">₹550</h5>
                     </div>
                     <div className="d-flex justify-content-between mb-2">
                       <p className="text-muted mb-0">
@@ -406,8 +406,8 @@ const Home = () => {
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
-                      <h5 className="mb-0">Wall Hangings</h5>
-                      <h5 className="text-dark mb-0">$1299</h5>
+                      <h5 className="mb-0">Wall Hanging</h5>
+                      <h5 className="text-dark mb-0">₹400</h5>
                     </div>
                     <div className="d-flex justify-content-between mb-2">
                       <p className="text-muted mb-0">
@@ -446,7 +446,7 @@ const Home = () => {
                     </div>
                     <div className="d-flex justify-content-between mb-3">
                       <h5 className="mb-0">Utensils Lid</h5>
-                      <h5 className="text-dark mb-0">$999</h5>
+                      <h5 className="text-dark mb-0">₹300</h5>
                     </div>
                     <div className="d-flex justify-content-between mb-2">
                       <p className="text-muted mb-0">
@@ -482,8 +482,8 @@ const Home = () => {
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
-                      <h5 className="mb-0">Krishna Statue</h5>
-                      <h5 className="text-dark mb-0">$1099</h5>
+                      <h5 className="mb-0">Dancing Statue</h5>
+                      <h5 className="text-dark mb-0">₹600</h5>
                     </div>
                     <div className="d-flex justify-content-between mb-2">
                       <p className="text-muted mb-0">
@@ -520,7 +520,7 @@ const Home = () => {
                     </div>
                     <div className="d-flex justify-content-between mb-3">
                       <h5 className="mb-0">Cactus Pot</h5>
-                      <h5 className="text-dark mb-0">$1299</h5>
+                      <h5 className="text-dark mb-0">₹550</h5>
                     </div>
                     <div className="d-flex justify-content-between mb-2">
                       <p className="text-muted mb-0">
@@ -556,8 +556,8 @@ const Home = () => {
                       </p>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
-                      <h5 className="mb-0">Glass Hangings</h5>
-                      <h5 className="text-dark mb-0">$1299</h5>
+                      <h5 className="mb-0">Glass Hanging</h5>
+                      <h5 className="text-dark mb-0">₹600</h5>
                     </div>
                     <div className="d-flex justify-content-between mb-2">
                       <p className="text-muted mb-0">

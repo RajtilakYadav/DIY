@@ -73,8 +73,8 @@ const Navbar = () => {
       return (
         <form class="d-flex">
 
-          <Link class="btn btn-primary me-3 text-uppercase" type="button" to={"/main/signup"}>Signup</Link>
-          <Link class="btn btn-primary me-3 text-uppercase" type="button" to={"/main/login"}>Login</Link>
+            <Link class="btn btn-primary me-3 text-uppercase" type="button" to={"/main/signup"}>Signup</Link>
+            <Link class="btn btn-primary me-3 text-uppercase" type="button" to={"/main/login"}>Login</Link>
           <div className="nav-menu-btn">
             <i className="bx bx-menu" onclick="myMenuFunction()" />
 
