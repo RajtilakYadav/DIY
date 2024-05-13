@@ -1,36 +1,91 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useProductContext from '../../context/ProductContext'
-import useUserContext from '../../UserContext';
+import useUserContext from '../../context/UserContext';
 import './Navbar.css'
+// Initialization for ES Users
+import { Dropdown, initMDB } from "mdb-ui-kit";
+
+
+
+
+
 
 const Navbar = () => {
+
+  useEffect(() => {
+    initMDB({ Dropdown });
+  },[])
+
+
+  // const [isOpen, setIsOpen] = useState(false);
+
+  // const toggleDropdown = () => {
+  //   setIsOpen(!isOpen);
+  // }
+
   const { getCartItemsCount } = useProductContext();
-  const { loggedIn, logout } = useUserContext();
+  const { loggedIn, logout, currentUser } = useUserContext();
   console.log(loggedIn);
 
   const showLoggedIn = () => {
     if (loggedIn) {
       return (
-        <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
-          <li className='nav-item'>
-            <button className='btn btn-danger' onClick={logout}>Logout</button>
-          </li>
-        </ul>
+       
+
+        <nav className="">
+        <div className="container-fluid">
+          <ul className="navbar-nav">
+            {/* Avatar */}
+            <li className="nav-item dropdown">
+              <Link
+                data-mdb-dropdown-init=""
+                className="nav-link dropdown-toggle d-flex align-items-center"
+                to="/"
+                id="navbarDropdownMenuLink"
+                role="button"
+                aria-expanded="false"
+              >
+                <img
+                  src={`http://localhost:3000/${currentUser.avatar}`}
+                  className="rounded-circle"
+                  height={30}
+                  width={30}
+                  alt="logo"
+                  loading="lazy"
+                />
+              </Link>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <Link to={"/user/userprofile"} className="dropdown-item" href="/user/UserProfile">
+                    My profile
+                  </Link>
+                </li>
+               
+                <li>
+                  <button onClick={logout} className="dropdown-item text-danger " href="#">
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
       )
     } else {
-      return(
+      return (
         <form class="d-flex">
 
-        <Link  class="btn btn-outline-success me-3 text-uppercase" type="button" to={"/main/signup"}>Signup</Link>
-        <Link class="btn btn-outline-success me-3 text-uppercase" type="button" to={"/main/login"}>Login</Link>
-        <div className="nav-menu-btn">
-      <i className="bx bx-menu" onclick="myMenuFunction()" />
-      
-    </div>
-      </form>
+          <Link class="btn btn-primary me-3 text-uppercase" type="button" to={"/main/signup"}>Signup</Link>
+          <Link class="btn btn-primary me-3 text-uppercase" type="button" to={"/main/login"}>Login</Link>
+          <div className="nav-menu-btn">
+            <i className="bx bx-menu" onclick="myMenuFunction()" />
+
+          </div>
+        </form>
       )
-     
+
     }
   }
   return (
@@ -39,7 +94,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <div className='d-flex ms-4 mt-3'>
             <a className="navbar-brand" href="#">
-              <img src="../Diy logo.png" alt="" style={{ height: 50, marginBottom:"5px" }} />
+              <img src="../logo.png" alt="" style={{ height: 50, marginBottom:"20px" }} />
             </a>
           </div>
           <button
@@ -82,10 +137,13 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link text-dark fw-bold d-flex text-uppercase" to={"/user/Cart"}>
-                  <span >{getCartItemsCount()}<i className="bi bi-bag "></i></span>
-                  Cart
+                  <span >{getCartItemsCount()}<i className="bi bi-cart"></i></span>
+
                 </Link>
               </li>
+
+          
+
 
             </ul>
             {

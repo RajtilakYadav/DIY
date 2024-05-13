@@ -30,17 +30,7 @@ const Product = () => {
   }
 
 
-  // const fetchRating = async () => {
-  //   const res = await fetch("http://localhost:3000/feedback/getall")
-  //   console.log(res.status);
-  //   const data = await res.json();
-  //   console.log(data);
-  //   setrating(data);
-  // }
 
-  // useEffect(() => {
-  //   fetchRating()
-  // }, [])
 
   const filterByCategory = (category) => {
 
@@ -53,10 +43,9 @@ const Product = () => {
 
   return (
     <div>
-
-      <div className="container">
+      <div className="container mt-5">
         <div className="row">
-          <div className="col-md-2" style={{marginTop:"10rem"}}>
+          <div className="col-md-2 sticky" style={{marginTop:"10rem", position:"fixed"}}>
             <h4 className="fw-bold my-4">Filter Category</h4>
             {/* <h3 className="my-2 ">Category</h3> */}
             <div className="d-flex mb-1">
@@ -79,9 +68,7 @@ const Product = () => {
 
 
           </div>
-          <div className="col-md-10">
-
-
+          <div className="col-md-10" style={{marginLeft:"210px"}}>
             <div className="container py-5">
               <div className="input-group w-100  py-4">
                 <span className="border-warning input-group-text bg-warning text-white">
@@ -100,13 +87,13 @@ const Product = () => {
                 {
                   product.map((pro) => {
                     return (
-                      <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
+                      <div className="col-md-6 col-lg-4 mb-4 mb-md-0">
                         <div className="card shadow p-3 mb-5 bg-white rounded w-100">
                           <img
                             src={"http://localhost:3000/" + pro.image}
                             className="card-img-top"
                             alt="Laptop"
-                            style={{ height: 150 }}
+                            style={{ height: 200 }}
                           />
                           <div className="card-body">
                             <div className="d-flex justify-content-between">
@@ -126,35 +113,24 @@ const Product = () => {
                             </div>
 
                             <div className="d-flex justify-content-between mb-2">
-                              {/* <p className="text-muted mb-0">
-                              Available: <span className="fw-bold">7</span>
-                            </p> */}
-                              {/* <div className="ms-auto text-warning">
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="far fa-star" />
-                            </div> */}
+                          
                             </div>
                           </div>
                           <div className="card-footer text-center">
-                            <button
-                              disabled={isInCart(pro)}
-                              onClick={(e) => addItemToCart(pro)}
-                              className="  btn btn-outline-primary mb-2">
-                              <span>
-                                {isInCart(pro) ? "Already Added" : "Add to Cart"}
-                              </span>
-                            </button>
-                            <Link to={"/user/view/" +pro._id} className="btn btn-primary px-5">View</Link>
+                           <button className="btn btn-primary w-100 mb-2"
+                           disabled={isInCart(pro)}
+                           onClick={(e) => addItemToCart(pro)}>
+                            <span>{isInCart(pro) ? "Added" : "Add to cart"}</span>
+
+                           </button>
+                            <Link to={"/user/view/" +pro._id} className="btn btn-primary w-100 ">View</Link>
                           </div>
                         </div>
+                       
                       </div>
-                    )
-                  })
-                }
-
+                  
+                  );
+                })}
               </div>
             </div>
 

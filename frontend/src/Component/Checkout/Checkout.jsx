@@ -7,7 +7,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import useCartContext from '../../context/ProductContext';
 
 import './Checkout.css';
-import useUserContext from '../../UserContext';
+import useUserContext from '../../context/UserContext';
 
 const appearance = {
     theme: "day",
