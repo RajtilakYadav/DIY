@@ -94,7 +94,11 @@ const Navbar = () => {
         <div className="container-fluid">
           <div className='d-flex ms-4 mt-3'>
             <a className="navbar-brand" href="#">
+<<<<<<< HEAD
               <img src="../Diy logo.png" alt="" style={{ height: 50, marginBottom: "5px" }} />
+=======
+              <img src="../logo.png" alt="" style={{ height: 50, marginBottom:"20px" }} />
+>>>>>>> 191f657f66e6d283eba628f521ae98cde62d2f7e
             </a>
           </div>
           <button

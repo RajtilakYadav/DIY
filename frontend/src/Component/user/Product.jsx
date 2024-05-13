@@ -9,26 +9,26 @@ const Product = () => {
   const [rating, setrating] = useState([]);
 
   const fetchProduct = async () => {
-    const res = await fetch("http://localhost:3000/product/getall");
+    const res = await fetch("http://localhost:3000/product/getall")
     console.log(res.status);
     const data = await res.json();
-    console.log(data);
-    setProduct(data);
+    console.log(data)
+    setProduct(data)
     setMasterList(data);
-  };
+  }
 
   useEffect(() => {
-    fetchProduct();
-  }, []);
+    fetchProduct()
+  }, [])
 
   const applysearch = (e) => {
     const inputText = e.target.value;
-    setProduct(
-      masterList.filter((equipment) => {
-        return equipment.title.toLowerCase().includes(inputText.toLowerCase());
-      })
-    );
-  };
+    setProduct(masterList.filter((equipment) => {
+      return equipment.title.toLowerCase().includes(inputText.toLowerCase());
+    }));
+
+  }
+
 
 
 
@@ -43,7 +43,12 @@ const Product = () => {
 
   return (
     <div>
+<<<<<<< HEAD
       <div className="container mt-5">
+=======
+
+      <div className="container">
+>>>>>>> 191f657f66e6d283eba628f521ae98cde62d2f7e
         <div className="row">
           <div className="col-md-2 sticky" style={{marginTop:"10rem", position:"fixed"}}>
             <h4 className="fw-bold my-4">Filter Category</h4>
@@ -68,7 +73,13 @@ const Product = () => {
 
 
           </div>
+<<<<<<< HEAD
           <div className="col-md-10" style={{marginLeft:"210px"}}>
+=======
+          <div className="col-md-10">
+
+
+>>>>>>> 191f657f66e6d283eba628f521ae98cde62d2f7e
             <div className="container py-5">
               <div className="input-group w-100  py-4">
                 <span className="border-warning input-group-text bg-warning text-white">
@@ -134,6 +145,7 @@ const Product = () => {
                                 {isInCart(pro) ? " Added" : "Add to Cart"}
                               </span>
                             </button>
+<<<<<<< HEAD
                             <Link to={"/user/view/" +pro._id} className="btn btn-primary px-4 ms-2">View</Link>
                           </div>
                         </div>
@@ -152,11 +164,23 @@ const Product = () => {
                   
                   );
                 })}
+=======
+                            <Link to={"/user/view/" +pro._id} className="btn btn-primary px-5">View</Link>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  })
+                }
+
+>>>>>>> 191f657f66e6d283eba628f521ae98cde62d2f7e
               </div>
             </div>
+
           </div>
         </div>
       </div>
+
     </div>
   );
 };
