@@ -43,12 +43,7 @@ const Product = () => {
 
   return (
     <div>
-<<<<<<< HEAD
       <div className="container mt-5">
-=======
-
-      <div className="container">
->>>>>>> 191f657f66e6d283eba628f521ae98cde62d2f7e
         <div className="row">
           <div className="col-md-2 sticky" style={{marginTop:"10rem", position:"fixed"}}>
             <h4 className="fw-bold my-4">Filter Category</h4>
@@ -73,13 +68,7 @@ const Product = () => {
 
 
           </div>
-<<<<<<< HEAD
           <div className="col-md-10" style={{marginLeft:"210px"}}>
-=======
-          <div className="col-md-10">
-
-
->>>>>>> 191f657f66e6d283eba628f521ae98cde62d2f7e
             <div className="container py-5">
               <div className="input-group w-100  py-4">
                 <span className="border-warning input-group-text bg-warning text-white">
@@ -104,7 +93,7 @@ const Product = () => {
                             src={"http://localhost:3000/" + pro.image}
                             className="card-img-top"
                             alt="Laptop"
-                            style={{ height: 150 }}
+                            style={{ height: 200 }}
                           />
                           <div className="card-body">
                             <div className="d-flex justify-content-between">
@@ -124,56 +113,24 @@ const Product = () => {
                             </div>
 
                             <div className="d-flex justify-content-between mb-2">
-                              {/* <p className="text-muted mb-0">
-                              Available: <span className="fw-bold">7</span>
-                            </p> */}
-                              {/* <div className="ms-auto text-warning">
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="fas fa-star" />
-                              <i className="far fa-star" />
-                            </div> */}
+                          
                             </div>
                           </div>
                           <div className="card-footer text-center">
-                            <button
-                              disabled={isInCart(pro)}
-                              onClick={(e) => addItemToCart(pro)}
-                              className="  btn btn-outline-primary ">
-                              <span>
-                                {isInCart(pro) ? " Added" : "Add to Cart"}
-                              </span>
-                            </button>
-<<<<<<< HEAD
-                            <Link to={"/user/view/" +pro._id} className="btn btn-primary px-4 ms-2">View</Link>
+                           <button className="btn btn-primary w-100 mb-2"
+                           disabled={isInCart(pro)}
+                           onClick={(e) => addItemToCart(pro)}>
+                            <span>{isInCart(pro) ? "Added" : "Add to cart"}</span>
+
+                           </button>
+                            <Link to={"/user/view/" +pro._id} className="btn btn-primary w-100 ">View</Link>
                           </div>
                         </div>
-                        {/* <div className="card-footer">
-                          <button
-                            disabled={isInCart(pro)}
-                            onClick={(e) => addItemToCart(pro)}
-                            className="btn btn-outline-primary"
-                          >
-                            <span>
-                              {isInCart(pro) ? "Already Added" : "Add to cart"}
-                            </span>
-                          </button>
-                        </div> */}
+                       
                       </div>
                   
                   );
                 })}
-=======
-                            <Link to={"/user/view/" +pro._id} className="btn btn-primary px-5">View</Link>
-                          </div>
-                        </div>
-                      </div>
-                    )
-                  })
-                }
-
->>>>>>> 191f657f66e6d283eba628f521ae98cde62d2f7e
               </div>
             </div>
 

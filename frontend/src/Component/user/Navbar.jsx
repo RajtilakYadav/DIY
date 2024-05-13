@@ -35,7 +35,7 @@ const Navbar = () => {
 
         <nav className="">
         <div className="container-fluid">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ">
             {/* Avatar */}
             <li className="nav-item dropdown">
               <a
@@ -77,8 +77,8 @@ const Navbar = () => {
       return (
         <form class="d-flex">
 
-          <Link class="btn btn-outline-success me-3 text-uppercase" type="button" to={"/main/signup"}>Signup</Link>
-          <Link class="btn btn-outline-success me-3 text-uppercase" type="button" to={"/main/login"}>Login</Link>
+          <Link class="btn btn-primary me-3 text-uppercase" type="button" to={"/main/signup"}>Signup</Link>
+          <Link class="btn btn-primary me-3 text-uppercase" type="button" to={"/main/login"}>Login</Link>
           <div className="nav-menu-btn">
             <i className="bx bx-menu" onclick="myMenuFunction()" />
 
@@ -94,11 +94,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <div className='d-flex ms-4 mt-3'>
             <a className="navbar-brand" href="#">
-<<<<<<< HEAD
-              <img src="../Diy logo.png" alt="" style={{ height: 50, marginBottom: "5px" }} />
-=======
               <img src="../logo.png" alt="" style={{ height: 50, marginBottom:"20px" }} />
->>>>>>> 191f657f66e6d283eba628f521ae98cde62d2f7e
             </a>
           </div>
           <button
