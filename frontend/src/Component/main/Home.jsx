@@ -170,7 +170,7 @@ const Home = () => {
             Categories
           </h1>
         <div className="container justify-content-center py-5 ">
-          <div className="row" style={{ marginLeft: 50 }}>
+          <div className="row" >
             <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
               <div className="card shadow p-3 mb-5 bg-white rounded" style={{ width: 230 }} onClick={productpage}>
                 <img

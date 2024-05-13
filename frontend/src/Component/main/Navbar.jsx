@@ -18,11 +18,7 @@ const Navbar = () => {
   },[])
 
 
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // const toggleDropdown = () => {
-  //   setIsOpen(!isOpen);
-  // }
+ 
 
   const { getCartItemsCount } = useProductContext();
   const { loggedIn, logout, currentUser } = useUserContext();

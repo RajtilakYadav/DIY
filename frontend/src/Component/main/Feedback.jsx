@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import './Feedback.css'
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
-import ReactStars from "react-rating-stars-component";
+// import ReactStars from "react-rating-stars-component"
+
 // import StarRatingComponent from 'react-star-rating-component';
 
 
@@ -94,12 +95,12 @@ const Feedback = () => {
                 defaultValue={""}
               />
               <div>
-                <ReactStars
+                {/* <ReactStars
                   rating={rating}
                   onChange={setRating}
                   size={30}
                   activeColor="#ffd700"
-                />
+                /> */}
               </div>
 
             </div>

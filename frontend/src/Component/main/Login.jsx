@@ -8,7 +8,7 @@ import useUserContext from '../../context/UserContext';
 const Login =()=> {
   
   const navigate = useNavigate()
-  const { setCurrentUser } = useUserContext();
+  const { setCurrentUser ,setLoggedIn } = useUserContext();
 
   const loginForm = useFormik({
     initialValues: {
@@ -47,7 +47,7 @@ const Login =()=> {
     // validationSchema: LoginSchema
   })
 
-  const {setLoggedIn} = useUserContext();
+
 
 
   return (

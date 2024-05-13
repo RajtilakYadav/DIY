@@ -4,7 +4,8 @@ import useProductContext from '../../context/ProductContext'
 import useUserContext from '../../context/UserContext';
 import './Navbar.css'
 // Initialization for ES Users
-import { Dropdown, initMDB } from "mdb-ui-kit";
+import {initMDB, Dropdown} from "mdb-ui-kit"
+
 
 
 
