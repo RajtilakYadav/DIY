@@ -22,7 +22,7 @@ import ContactUs from "./Component/main/ContactUs";
 import Feedback from "./Component/main/Feedback";
 import UpdateProduct from "./Component/admin/UpdateProduct";
 import { ProductProvider } from "./context/ProductContext";
-import AdminAuth from "./auth/AdminAuth";
+
 import Main from "./Component/main";
 import User from "./Component/user";
 import Notfound from "./Notfound";

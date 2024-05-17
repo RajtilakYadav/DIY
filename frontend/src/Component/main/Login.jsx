@@ -196,14 +196,14 @@ const Login =()=> {
         </div>
         <div className="footer-link padding-top--24">
           <span>
-            Don't have an account? <a href="">Sign up</a>
+            Don't have an account? <Link to={"/main/Signup"}>Sign up</Link>
           </span>
           <div className="listing padding-top--24 padding-bottom--24 flex-flex center-center">
             <span>
               <a href="#">© DIY Innovates</a>
             </span>
             <span>
-              <a href="#">Contact</a>
+              <Link to={"/main/ContactUs"}>Contact</Link>
             </span>
             <span>
               <a href="#">Privacy &amp; terms</a>

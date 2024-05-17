@@ -180,17 +180,13 @@ const Adminsignin = () => {
                   <input type="submit" name="submit" defaultValue="Continue" />
                 </div>
                 <div className="field">
-                  <a className="ssolink" href="#">
-                    Other ways to Sign In
-                  </a>
+                 
                 </div>
               </form>
             </div>
           </div>
           <div className="footer-link padding-top--24">
-            <span>
-              Don't have an account? <a href="">Sign up</a>
-            </span>
+           
             <div className="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span>
                 <a href="#">© DIY Innovates</a>

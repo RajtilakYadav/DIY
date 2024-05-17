@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { HiThumbUp } from "react-icons/hi";
+import { HiThumbDown } from "react-icons/hi";
+import { FaShareAlt } from "react-icons/fa";
 
 const Video = () => {
 
@@ -56,7 +59,7 @@ const Video = () => {
 
   return (
     <div>
-      <div className="container" style={{marginTop:"100px"}}>
+      <div className="container" style={{ marginTop: "100px" }}>
         <label for="hs-trailing-button-add-on-with-icon-and-button" className="sr-only">Label</label>
         {/* <div className="relative flex rounded-lg shadow-sm my-2">
           <input onChange={applySearch} type="text" id="hs-trailing-button-add-on-with-icon-and-button" name="hs-trailing-button-add-on-with-icon-and-button" style={{ paddingInline: "4rem" }} className=" mt-2 py-3   ps-11 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" />
@@ -90,19 +93,24 @@ const Video = () => {
 
                     <h1 className="py-1 d-flex justify-content-start fw-bold " style={{ color: "teal", fontFamily: "initial" }}>{vid.description}</h1>
                     <h1 className='d-flex justify-content-start' style={{ color: "teal", fontFamily: "initial" }}>{vid.title}</h1>
+                   
 
 
                     <div className='d-flex justify-content-between'>
-                      <div className='d-flex py-2'>
 
-                        <button className='btn btn-outline-dark  rounded-pill shadow p-3 mb-5 bg-blue rounded' style={{ fontFamily: "initial" }}>Subscribe</button>
-                      </div>
-                      <div>
-                        <button onClick={likes} className='btn btn-outline-dark rounded-pill ' style={{ color: "blue", fontFamily: "initial" }}><i className="bi bi-hand-thumbs-up "></i>Likes <span>{count}</span> </button>
+                      <div className='mx-auto py-2'>
+                        {/* <button onClick={likes} className='btn btn-outline-dark rounded-pill ' style={{ color: "blue", fontFamily: "initial" }}><i className="bi bi-hand-thumbs-up "></i>Likes <span>{count}</span> </button>
                         <button onClick={dislikes} className='btn btn-outline-dark rounded-pill' style={{ color: "teal", fontFamily: "initial" }}><i className="bi bi-hand-thumbs-down"></i>Dislike </button>
-                        <button onClick={() => shareVideo(vid)} className='btn btn-outline-dark rounded-pill' style={{ color: "teal", fontFamily: "initial" }}><i className="bi bi-share"></i>Share</button>
+                        <button onClick={() => shareVideo(vid)} className='btn btn-outline-dark rounded-pill' style={{ color: "teal", fontFamily: "initial" }}><i className="bi bi-share"></i>Share</button> */}
+                       
+                       <HiThumbUp className='me-5 fs-2' onClick={likes} /> 
+                        <HiThumbDown  className='me-5 fs-2' onClick={dislikes}/>
+                    
+                        <FaShareAlt  className='fs-2' onClick={() => shareVideo(vid)}/>
+                       
 
                       </div>
+                     
                     </div>
                   </div>
 

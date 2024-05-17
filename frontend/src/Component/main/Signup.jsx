@@ -72,7 +72,7 @@ const Signup = () =>{
                           id="name"
                           value={signupForm.values.name}
                           onChange={signupForm.handleChange}
-                          className="form-control"
+                          className="form-control border"
                         />
                        
                       </div>
@@ -88,7 +88,7 @@ const Signup = () =>{
                           id="email"
                           value={signupForm.values.email}
                           onChange={signupForm.handleChange}
-                          className="form-control"
+                          className="form-control border"
                         />
                        
                       </div>
@@ -104,7 +104,7 @@ const Signup = () =>{
                           id="password"
                           value={signupForm.values.password}
                           onChange={signupForm.handleChange}
-                          className="form-control"
+                          className="form-control border"
                         />
                       
                       </div>
@@ -120,7 +120,7 @@ const Signup = () =>{
                           id="cpassword"
                           value={signupForm.values.cpassword}
                           onChange={signupForm.handleChange}
-                          className="form-control"
+                          className="form-control border"
                         />
                       
                       </div>

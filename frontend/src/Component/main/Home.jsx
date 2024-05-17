@@ -8,6 +8,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Home.css'
+import { MDBCarousel, MDBCarouselItem, MDBCarouselCaption } from 'mdb-react-ui-kit';
+import { RiAdminFill } from "react-icons/ri";
 
 
 
@@ -99,7 +101,7 @@ const Home = () => {
                       Hands On Guidance
                     </h3>
                     <p className="fs-4 mb-5" style={{ fontSize: 25 }}>
-                     Guiding you step-by-step towards DIY mastery through video tutorials.
+                      Guiding you step-by-step towards DIY mastery through video tutorials.
                     </p>
                     <div className="d-grid gap-2 d-sm-flex ">
                       <Link
@@ -163,12 +165,12 @@ const Home = () => {
 
       {/* Blog 2 - Bootstrap Brain Component */}
       <section style={{ marginTop: 50, marginBottom: 50 }}>
-      <h1
-            className="mb-3 mt-3"
-            style={{ fontSize: 30, fontWeight: "bold", textAlign: "center" }}
-          >
-            Categories
-          </h1>
+        <h1
+          className="mb-3 mt-3"
+          style={{ fontSize: 30, fontWeight: "bold", textAlign: "center" }}
+        >
+          Categories
+        </h1>
         <div className="container justify-content-center py-5 ">
           <div className="row" >
             <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
@@ -274,8 +276,8 @@ const Home = () => {
           >
             Product
           </h1>
-          <div className="container py-5 "style={{}}>
-            <div className="row"style={{}}>
+          <div className="container py-5 " style={{}}>
+            <div className="row" style={{}}>
               <div className="col-md-12 col-lg-3 mb-4 mb-lg-0">
                 <div className="card shadow p-3 mb-5 bg-white rounded">
                   <img
@@ -586,38 +588,30 @@ const Home = () => {
           Tutorials
         </h1>
 
-     
 
 
-        <div
-          id="carouselExampleAutoplaying"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
+
+       
+
+        {/* <div id="carouselExample" className="carousel slide">
           <div className="carousel-inner">
+
             {
               product.map((pro) => {
-                return (
-                  <div className="carousel-item active">
+                return(
 
-
-                    <video src={"http://localhost:3000/" + pro.video} controls style={{ height: "30rem", marginLeft: "19rem" }} ></video>
-
-                  </div>
+            <div className="carousel-item active">
+              <video controls autoplay loop src={"http://localhost:3000/" +pro.video} className="d-block w-75 mx-auto" alt="..." />
+            </div>
                 )
               })
             }
-            {/* <div className="carousel-item">
-             <video src="../vid2.mp4"  controls style={{height:"30rem", marginLeft:"19rem"}}  ></video>
-            </div>
-            <div className="carousel-item">
-            <video src="../vid3.mp4"  controls style={{height:"30rem", marginLeft:"19rem"}} ></video>
-            </div> */}
+           
           </div>
           <button
             className="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-target="#carouselExample"
             data-bs-slide="prev"
           >
             <span className="carousel-control-prev-icon" aria-hidden="true" />
@@ -626,129 +620,71 @@ const Home = () => {
           <button
             className="carousel-control-next"
             type="button"
-            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-target="#carouselExample"
             data-bs-slide="next"
           >
             <span className="carousel-control-next-icon" aria-hidden="true" />
             <span className="visually-hidden">Next</span>
           </button>
-        </div>
-
-
-        {/* <div className="container d-flex justify-content-center">
-          <div className="row">
-            <div className="col-md-3 mt-3 justify-content-center">
-              <video
-                src={video}
-                type="video/mp4"
-                loop=""
-                className="hover-to-play w-100"
-                style={{ borderRadius: 10 }}
-              ></video>
-            </div>
-            <div className="col-md-3 mt-3 justify-content-center">
-              <video
-                src={video}
-                type="vid2/mp4"
-                loop=""
-                className="hover-to-play w-100"
-                style={{ borderRadius: 10 }}
-              ></video>
-            </div>
-            <div className="col-md-3 mt-3 justify-content-center">
-              <video
-                src="./vid3.mp4"
-                type="video/mp4"
-                loop=""
-                className="hover-to-play w-100"
-                style={{ borderRadius: 10 }}
-              ></video>
-            </div>
-            <div className="col-md-3 mt-3 justify-content-center">
-              <video
-                src="./vid4.mp4"
-                type="video/mp4"
-                loop=""
-                className="hover-to-play w-100"
-                style={{ borderRadius: 10 }}
-              ></video>
-            </div>
-          </div>
-        </div>
-        <div className="container d-flex justify-content-center">
-          <div className="row">
-            <div className="col-md-3 mt-3 justify-content-center">
-              <video
-                src="./vid5.mp4"
-                type="video/mp4"
-                loop=""
-                className="hover-to-play w-100"
-                style={{ borderRadius: 10 }}
-              ></video>
-            </div>
-            <div className="col-md-3 mt-3 justify-content-center">
-              <video
-                src="./vid6.mp4"
-                type="video/mp4"
-                loop=""
-                className="hover-to-play w-100"
-                style={{ borderRadius: 10 }}
-              ></video>
-            </div>
-            <div className="col-md-3 mt-3 justify-content-center">
-              <video
-                src="./vid7.mp4"
-                type="video/mp4"
-                loop=""
-                className="hover-to-play w-100"
-                style={{ borderRadius: 10 }}
-              ></video>
-            </div>
-            <div className="col-md-3 mt-3 justify-content-center">
-              <video
-                src="./vid8.mp4"
-                type="video/mp4"
-                loop=""
-                className="hover-to-play w-100"
-                style={{ borderRadius: 10 }}
-              ></video>
-            </div>
-          </div>
         </div> */}
+
+
+
+<MDBCarousel showIndicators showControls fade>
+{
+  product.map((pro) => {
+    return(
+
+      <MDBCarouselItem itemId={1}>
+        <video controls loop autoplay src={"http://localhost:3000/" +pro.video} className='d-block w-75 mx-auto'></video>
+        <MDBCarouselCaption>
+          
+        </MDBCarouselCaption>
+      </MDBCarouselItem>
+
+    
+)
+})
+}
+</MDBCarousel>
+
+
+
+
       </section>
       {/* Hero 2 */}
       <section className="py-3 py-lg-5 py-xl-8">
-  <div className="container overflow-hidden">
-    <div className="row gy-5 gy-lg-0 align-items-lg-center justify-content-lg-between">
-      <div className="col-12 col-lg-5 text-center">
-        <div className="position-relative">
-          <img
-            className="img-fluid position-relative z-2 mt-5 mb-3"
-            loading="lazy"
-            src="https://cdn.dribbble.com/userupload/12346393/file/original-78e7d991c0cb0cde31d7e6d4b735a862.png?resize=1504x1128"
-            alt="Art of Design"
-            style={{ height: 300, width:470 }}
-          />
+        <div className="container overflow-hidden">
+          <div className="row gy-5 gy-lg-0 align-items-lg-center justify-content-lg-between">
+            <div className="col-12 col-lg-5 text-center">
+              <div className="position-relative">
+                <img
+                  className="img-fluid position-relative z-2 mt-5 mb-3"
+                  loading="lazy"
+                  src="https://cdn.dribbble.com/userupload/12346393/file/original-78e7d991c0cb0cde31d7e6d4b735a862.png?resize=1504x1128"
+                  alt="Art of Design"
+                  style={{ height: 300, width: 470 }}
+                />
+              </div>
+            </div>
+            <div className="col-12 col-lg-7 order-1 order-lg-0">
+              <h2
+                classname="display-3 fw-bold mb-4 "
+                style={{ fontSize: 40, textAlign: "center" }}
+              >
+                About Us
+              </h2>
+              <p className=" mb-5 mt-4" style={{ font: "size 80px" }}>
+                {" "}
+                At DIY Innovate, we believe that everyone has a creative spark waiting
+                to be ignited. Our mission is to provide you with the tools,
+                materials, and inspiration you need to transform your creative ideas
+                into reality.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="col-12 col-lg-7 order-1 order-lg-0">
-        <h2
-          classname="display-3 fw-bold mb-4 "
-          style={{ fontSize: 40, textAlign: "center" }}
-        >
-          About Us
-        </h2>
-        <p className=" mb-5 mt-4" style={{ font: "size 80px" }}>
-          {" "}
-          At DIY Innovate, we believe that everyone has a creative spark waiting
-          to be ignited. Our mission is to provide you with the tools,
-          materials, and inspiration you need to transform your creative ideas
-          into reality.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Footer 2 */}
       <section>
@@ -795,7 +731,7 @@ const Home = () => {
                           src="../logo.png"
                           className="img-fluid"
                           alt="logo"
-                          
+
                         />
                       </a>
                     </div>
@@ -875,6 +811,10 @@ const Home = () => {
                           <i className="fab fa-telegram-plane" />
                         </button>
                       </form>
+                      <Link to="/main/adminsignin" className='my-3 fs-1 d-flex'>
+                      <RiAdminFill className='mt-3' />
+                      <p className='ms-3'>Admin Portal</p>
+                      </Link>
                     </div>
                   </div>
                 </div>
