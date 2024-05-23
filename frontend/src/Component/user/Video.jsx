@@ -61,14 +61,6 @@ const Video = () => {
     <div>
       <div className="container" style={{ marginTop: "100px" }}>
         <label for="hs-trailing-button-add-on-with-icon-and-button" className="sr-only">Label</label>
-        {/* <div className="relative flex rounded-lg shadow-sm my-2">
-          <input onChange={applySearch} type="text" id="hs-trailing-button-add-on-with-icon-and-button" name="hs-trailing-button-add-on-with-icon-and-button" style={{ paddingInline: "4rem" }} className=" mt-2 py-3   ps-11 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" />
-          <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-4">
-            <svg className="flex-shrink-0 size-6  text-gray-400" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
-          </div>
-
-        </div> */}
-
         <div className="input-group w-100  py-4">
           <span className="border-warning input-group-text bg-warning text-white">
             <i className="fa-solid fa-magnifying-glass" />

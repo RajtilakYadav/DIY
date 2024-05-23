@@ -1,12 +1,5 @@
 
 import React,{useState, useEffect} from 'react'
-
-
-
-// const ManageUser = () => {
-//   return (
-//     <div>ManageUser</div>
-
 import { enqueueSnackbar } from 'notistack';
 
 

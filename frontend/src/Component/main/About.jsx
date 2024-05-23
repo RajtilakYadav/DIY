@@ -21,12 +21,6 @@ const About = () => {
 
  At DIY Innovate, we believe that everyone has a creative spark waiting to be ignited. Our mission is to provide you with the tools, materials, and inspiration you need to transform your creative ideas into reality.
           </p>
-          {/* <p className="lead text-muted">
-            Snippet by{" "}
-            <a href="https://bootstrapious.com/snippets" className="text-muted">
-              <u>Bootstrapious</u>
-            </a>
-          </p> */}
         </div>
         <div className="col-lg-6 d-none d-lg-block">
           <img

@@ -83,7 +83,7 @@ const Home = () => {
                   </div>
                   <div className="col-12 col-lg-6 text-center" style={{ height: 550 }}>
                     <img
-                      className="img-fluid justify-content-center"
+                      className="img-fluid justify-content-center mt-5"
                       src="https://cdn3d.iconscout.com/3d/premium/thumb/carpenter-using-woodworking-tools-for-craft-work-in-carpentry-workshop-9246249-7622026.png"
                       alt="Art of Design"
                     />
@@ -150,7 +150,7 @@ const Home = () => {
                   </div>
                   <div className="col-12 col-lg-6 text-center" style={{ height: 550 }}>
                     <img
-                      className="img-fluid justify-content-center"
+                      className="img-fluid justify-content-center mt-5"
                       src="https://3dbay.io/files/preview/1280x853/11681835850e1uo4bi142gev1aj4wzjaignq40knhnzaxcwq8owff57pdvmhpoih3kmnldd9fazvfvsdd42xaebw4e1fkf8i0igdj4avr4tkuqd.png"
                       alt="Art of Design"
                     />
