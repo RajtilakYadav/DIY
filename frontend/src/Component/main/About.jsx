@@ -85,45 +85,6 @@ const About = () => {
         </div>
       </div>
       <div className="row text-center">
-        {/* Team item*/}
-        {/* <div className="col-xl-3 col-sm-6 mb-5">
-          <div className="bg-white rounded shadow-sm py-5 px-4">
-            <img
-              src="https://res.cloudinary.com/mhmd/image/upload/v1556834132/avatar-4_ozhrib.png"
-              alt=""
-              width={100}
-              className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-            />
-            <h5 className="mb-0">Manuella Nevoresky</h5>
-            <span className="small text-uppercase text-muted">
-              CEO - Founder
-            </span>
-            <ul className="social mb-0 list-inline mt-3">
-              <li className="list-inline-item">
-                <a href="#" className="social-link">
-                  <i className="fa fa-facebook-f" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#" className="social-link">
-                  <i className="fa fa-twitter" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#" className="social-link">
-                  <i className="fa fa-instagram" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#" className="social-link">
-                  <i className="fa fa-linkedin" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div> */}
-        {/* End*/}
-        {/* Team item*/}
         <div className="col-xl-3 col-sm-6 mb-5">
           <div className="bg-white rounded shadow-sm py-5 px-4">
             <img
@@ -160,8 +121,6 @@ const About = () => {
             </ul>
           </div>
         </div>
-        {/* End*/}
-        {/* Team item*/}
         <div className="col-xl-3 col-sm-6 mb-5">
           <div className="bg-white rounded shadow-sm py-5 px-4">
             <img
@@ -198,45 +157,6 @@ const About = () => {
             </ul>
           </div>
         </div>
-        {/* End*/}
-        {/* Team item*/}
-        {/* <div className="col-xl-3 col-sm-6 mb-5">
-          <div className="bg-white rounded shadow-sm py-5 px-4">
-            <img
-              src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-1_s02nlg.png"
-              alt=""
-              width={100}
-              className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-            />
-            <h5 className="mb-0">John Tarly</h5>
-            <span className="small text-uppercase text-muted">
-              CEO - Founder
-            </span>
-            <ul className="social mb-0 list-inline mt-3">
-              <li className="list-inline-item">
-                <a href="#" className="social-link">
-                  <i className="fa fa-facebook-f" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#" className="social-link">
-                  <i className="fa fa-twitter" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#" className="social-link">
-                  <i className="fa fa-instagram" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#" className="social-link">
-                  <i className="fa fa-linkedin" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div> */}
-        {/* End*/}
       </div>
     </div>
   </div>
